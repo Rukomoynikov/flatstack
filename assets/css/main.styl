@@ -7,7 +7,8 @@ html, body
 	margin 0px
 	font-family base-font
 	font-size 66%
-		
+
+// Starting header section
 .header
 	height 596px 
 	background url('../images/headerbg.jpg')
@@ -87,6 +88,7 @@ html, body
 			background alpha(#fff, 0.9)
 			top 0px
 			right 0px
+			box-shadow 0 0 2px black
 			animation showFromtTop 0.3s 
 			
 			.menu
@@ -102,11 +104,12 @@ html, body
 						
 					&:hover
 						box-shadow: 0 0 1px #fff;
-					
+
+// Section with services
 .service
 	background-color: #5db5a4;
 	min-height 747px
-	padding-top 78px
+	padding-top 100px
 	text-align center
 
 	&__title
@@ -120,12 +123,11 @@ html, body
 		
 		&:after
 			content " "
-			width 10%
+			width 6%
 			height 4px
 			background alpha(#fff, 0.3)
 			display block
-			margin 20px auto 0px auto
-			// margin 0px auto
+			margin 14px auto 0px auto
 			
 	&__subtitle
 		font-family: "ralewaylight"
@@ -159,7 +161,7 @@ html, body
 		text-transform: uppercase;
 		color white
 		letter-spacing 1px 
-		margin-top 76px
+		margin-top 69px
 		
 	&__description
 		color: white;
@@ -167,7 +169,84 @@ html, body
 		font-weight: 400;
 		line-height: 25px;
 		font-family "ralewayextralight"
+
+// Section with Team members
+
+.team
+	min-height 914px;
+	background #eefafb;
+	padding-top 100px
+	text-align center
+	margin-bottom 100px
+	
+	&__title
+		font-family: Oxygen;
+		font-size: 38px;
+		font-weight: 300;
+		margin 0px
+		text-align center
+		letter-spacing 10px
+		color: #383838;
 		
+		&:after
+			content " "
+			width 6%
+			height 4px
+			background alpha(#000, 0.3)
+			display block
+			margin 14px auto 0px auto
+		
+	&__subtitle
+		font-family: "ralewaylight"
+		font-size: 18px;
+		font-weight: 400;
+		color: #383838
+		max-width 709px
+		text-align center
+		margin 33px auto 71px auto
+
+.member
+	display inline-block
+	vertical-align top
+	max-width 192px
+	margin-right 85px
+	
+	&__photo
+		border-radius 50%
+		margin-bottom 40px
+		
+	&__name
+		color: #383838;
+		font-family: 'Oxygen';
+		font-size: 22px;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom 15px
+		
+	&__position
+		color: #383838;
+		font-family: "ralewayextralight";
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		
+	&__description
+		color: #383838;
+		font-family: "ralewayextralight";
+		font-size: 16px;
+		font-weight: 400;
+		min-height 114px
+		
+	&__link
+		// Making clickable area more
+		padding 10px
+		
+		&:hover svg > path
+			fill black
+			opacity 1
+			transition 0.3s all
+
+// Animation for top menu
 @keyframes showFromtTop
 	from {
 		top -70px

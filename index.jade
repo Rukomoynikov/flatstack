@@ -3,6 +3,7 @@ html
 	head
 		title FlatStack Frontend Test
 		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width')
 		link(href="./assets/css/main.css", rel="stylesheet")
 		link(href="./assets/css/normalize.css", rel="stylesheet")
 		link(href='https://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css')
@@ -44,27 +45,53 @@ html
 				p.oneService__description Et harum quidem rerum est et expedita distinctio. Nam libero tempore.
 		section.team
 			h2.team__title MEET OUR TEAM
-			span.team__subtitle We are a small team of designers and developers, who help brands with big ideas.
-			.team__col.col
-				img(src='./assets/images/photo1.jpg')
-				h3.team__name James Collins
-				span.team__position CEO / Marketing Guru
-				p.team__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
-			.team__col.col
-				img(src='./assets/images/photo2.jpg')
-				h3.team__name Peter Davis
-				span.team__position Creative Director
-				p.team__description Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.
-			.team__col.col
-				img(src='./assets/images/photo3.jpg')
-				h3.team__name Olivia Wilde
-				span.team__position Lead Designer
-				p.team__description Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-			.team__col.col
-				img(src='./assets/images/photo4.jpg')
-				h3.team__name Ashley Greene
-				span.team__position SEO / Developer
-				p.team__description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-
-
+			.team__subtitle We are a small team of designers and developers, who help brands with big ideas.
+			.team__member.member
+				img.member__photo(src='./assets/images/photo1.jpg')
+				h3.member__name James Collins
+				span.member__position CEO / Marketing Guru
+				p.member__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+				a.member__link(href='#')
+					include ./assets/images/facebook-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/twitter-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/linkedin-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/mail-icon.svg
+			.team__member.member
+				img.member__photo(src='./assets/images/photo2.jpg')
+				h3.member__name Peter Davis
+				span.member__position Creative Director
+				p.member__description Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.
+				a.member__link(href='#')
+					include ./assets/images/twitter-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/linkedin-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/mail-icon.svg
+			.team__member.member
+				img.member__photo(src='./assets/images/photo3.jpg')
+				h3.member__name Olivia Wilde
+				span.member__position Lead Designer
+				p.member__description Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+				a.member__link(href='#')
+					include ./assets/images/facebook-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/twitter-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/linkedin-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/mail-icon.svg
+			.team__member.member
+				img.member__photo(src='./assets/images/photo4.jpg')
+				h3.member__name Ashley Greene
+				span.member__position SEO / Developer
+				p.member__description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+				a.member__link(href='#')
+					include ./assets/images/facebook-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/twitter-icon.svg
+				a.member__link(href='#')
+					include ./assets/images/mail-icon.svg
 		script(src='./assets/js/main.js', type='text/javascript')

@@ -87,6 +87,7 @@ body {
   background: rgba(255,255,255,0.9);
   top: 0px;
   right: 0px;
+  box-shadow: 0 0 2px #000;
   -webkit-animation: showFromtTop 0.3s;
           animation: showFromtTop 0.3s;
 }
@@ -107,7 +108,7 @@ body {
 .service {
   background-color: #5db5a4;
   min-height: 747px;
-  padding-top: 78px;
+  padding-top: 100px;
   text-align: center;
 }
 .service__title {
@@ -121,11 +122,11 @@ body {
 }
 .service__title:after {
   content: " ";
-  width: 10%;
+  width: 6%;
   height: 4px;
   background: rgba(255,255,255,0.3);
   display: block;
-  margin: 20px auto 0px auto;
+  margin: 14px auto 0px auto;
 }
 .service__subtitle {
   font-family: "ralewaylight";
@@ -158,7 +159,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
-  margin-top: 76px;
+  margin-top: 69px;
 }
 .oneService__description {
   color: #fff;
@@ -166,6 +167,79 @@ body {
   font-weight: 400;
   line-height: 25px;
   font-family: "ralewayextralight";
+}
+.team {
+  min-height: 914px;
+  background: #eefafb;
+  padding-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.team__title {
+  font-family: Oxygen;
+  font-size: 38px;
+  font-weight: 300;
+  margin: 0px;
+  text-align: center;
+  letter-spacing: 10px;
+  color: #383838;
+}
+.team__title:after {
+  content: " ";
+  width: 6%;
+  height: 4px;
+  background: rgba(0,0,0,0.3);
+  display: block;
+  margin: 14px auto 0px auto;
+}
+.team__subtitle {
+  font-family: "ralewaylight";
+  font-size: 18px;
+  font-weight: 400;
+  color: #383838;
+  max-width: 709px;
+  text-align: center;
+  margin: 33px auto 71px auto;
+}
+.member {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 192px;
+  margin-right: 85px;
+}
+.member__photo {
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+.member__name {
+  color: #383838;
+  font-family: 'Oxygen';
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.member__position {
+  color: #383838;
+  font-family: "ralewayextralight";
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.member__description {
+  color: #383838;
+  font-family: "ralewayextralight";
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 114px;
+}
+.member__link {
+  padding: 10px;
+}
+.member__link:hover svg > path {
+  fill: #000;
+  opacity: 1;
+  transition: 0.3s all;
 }
 @-webkit-keyframes showFromtTop {
   from {
