@@ -1,0 +1,102 @@
+base-font = Raleway
+
+*, *:after, *:before
+	box-sizing: border-box
+
+html, body
+	margin 0px
+	font-family base-font
+	font-size 66%
+		
+.header
+	max-width 1440px
+	height 596px 
+	background url('../images/headerbg.jpg')
+	position relative
+	z-index 100
+	
+	&__redcontainer
+		width 100%
+		height 100%
+		position absolute
+		top 0px 
+		left 0px
+		background rgba(245,122,130,0.8)
+		mix-blend-mode multiply
+	
+	&__slogan
+		vertical-align middle
+		color: #f7f3ea;
+		font-size: 38px;
+		font-weight: 300;
+		font-family: 'ralewayextralight';
+		text-align center
+		transform: translateX(50%) translateY(50%);
+		position: absolute;
+		right: 50%;
+		bottom: 45%;
+		white-space:nowrap;
+		padding-left: 62px;
+		
+	&__button
+		text-transform uppercase
+		color: #f57a82
+		padding 1rem 2rem
+		font-size 2.5rem
+		text-decoration none
+		background-color: white;
+		border: 2px solid white;
+		border-radius: 4px;
+		font-family Oxygen
+		letter-spacing 3px
+		display inline-block 
+		margin-top 20px
+
+	&__nav
+		position absolute
+		top 59px
+		z-index 100
+		right 0px
+		
+		.menu
+			
+			&__element
+				padding 0.5rem 1.4rem
+				margin-right 28px
+				text-transform: uppercase;
+				color: white;
+				font-size: 16px;
+				font-weight: 400;	
+				font-family "ralewaylight"
+				text-decoration none
+				
+				&:last-child
+					margin-right 17px
+				
+				&--active
+					border 1px solid white;
+					border-radius: 4px;
+					
+				&:hover
+					box-shadow: 0 0 1px #fff;
+					
+		&--fixed
+			position fixed
+			width 100%
+			height 70px
+			background alpha(#fff, 0.9)
+			top 0px
+			
+			.menu
+				line-height: 56px;
+				float right
+			
+				.menu__element
+					color black 
+					
+					&--active
+						border 1px solid black;
+						border-radius: 4px;
+						
+					&:hover
+						box-shadow: 0 0 1px #fff;
