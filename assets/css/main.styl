@@ -9,11 +9,11 @@ html, body
 	font-size 66%
 		
 .header
-	max-width 1440px
 	height 596px 
 	background url('../images/headerbg.jpg')
 	position relative
 	z-index 100
+	background-size cover
 	
 	&__redcontainer
 		width 100%
@@ -33,8 +33,8 @@ html, body
 		text-align center
 		transform: translateX(50%) translateY(50%);
 		position: absolute;
-		right: 50%;
-		bottom: 45%;
+		right: 49%;
+		bottom: 46%;
 		white-space:nowrap;
 		padding-left: 62px;
 		
@@ -56,7 +56,7 @@ html, body
 		position absolute
 		top 59px
 		z-index 100
-		right 0px
+		right 22px
 		
 		.menu
 			
@@ -86,6 +86,8 @@ html, body
 			height 70px
 			background alpha(#fff, 0.9)
 			top 0px
+			right 0px
+			animation showFromtTop 0.3s 
 			
 			.menu
 				line-height: 56px;
@@ -100,3 +102,76 @@ html, body
 						
 					&:hover
 						box-shadow: 0 0 1px #fff;
+					
+.service
+	background-color: #5db5a4;
+	min-height 747px
+	padding-top 78px
+	text-align center
+
+	&__title
+		font-family: Oxygen;
+		font-size: 38px;
+		font-weight: 300;
+		margin 0px
+		text-align center
+		letter-spacing 10px
+		color white
+		
+		&:after
+			content " "
+			width 10%
+			height 4px
+			background alpha(#fff, 0.3)
+			display block
+			margin 20px auto 0px auto
+			// margin 0px auto
+			
+	&__subtitle
+		font-family: "ralewaylight"
+		font-size: 18px;
+		font-weight: 400;
+		color white
+		max-width 709px
+		text-align center
+		margin 33px auto 71px auto
+		
+.oneService
+	display inline-block
+	vertical-align top
+	max-width 192px
+	margin-right 85px
+		
+	&:last-child
+		margin-right 0px
+		
+	svg
+		height 126px
+		
+		&hover > path
+			fill black
+		
+
+	&__title
+		font-family: Oxygen;
+		font-size: 22px;
+		font-weight: 300;
+		text-transform: uppercase;
+		color white
+		letter-spacing 1px 
+		margin-top 76px
+		
+	&__description
+		color: white;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 25px;
+		font-family "ralewayextralight"
+		
+@keyframes showFromtTop
+	from {
+		top -70px
+	}
+	to {
+		top 0px
+	}

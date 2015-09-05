@@ -1,9 +1,11 @@
 doctype html
 html
 	head
+		title FlatStack Frontend Test
+		meta(charset='utf-8')
 		link(href="./assets/css/main.css", rel="stylesheet")
 		link(href="./assets/css/normalize.css", rel="stylesheet")
-		link(href="./assets/fonts/oxygen/oxygen.css", rel="stylesheet")
+		link(href='https://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css')
 		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet")
 	body
 		header.header
@@ -21,4 +23,48 @@ html
 					| and we build awesome websites and mobile apps
 					br
 					a(href='').header__button WORK WITH US!
+		section.service
+			h2.service__title SERVICES WE PROVIDE
+			.service__subtitle We are working with both individuals and businesses from all over the globe to create awesome websites and applications.
+			.oneService
+				include ./assets/images/icon1.svg
+				h3.oneService__title Branding
+				p.oneService__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+			.oneService
+				include ./assets/images/icon2.svg
+				h3.oneService__title Design
+				p.oneService__description Sed ut perspiciatis unde omnis iste natus error sit voluptatem  
+			.oneService
+				include ./assets/images/icon3.svg
+				h3.oneService__title Development
+				p.oneService__description At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.
+			.oneService
+				include ./assets/images/icon4.svg
+				h3.oneService__title ROCKET SCIENCE
+				p.oneService__description Et harum quidem rerum est et expedita distinctio. Nam libero tempore.
+		section.team
+			h2.team__title MEET OUR TEAM
+			span.team__subtitle We are a small team of designers and developers, who help brands with big ideas.
+			.team__col.col
+				img(src='./assets/images/photo1.jpg')
+				h3.team__name James Collins
+				span.team__position CEO / Marketing Guru
+				p.team__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+			.team__col.col
+				img(src='./assets/images/photo2.jpg')
+				h3.team__name Peter Davis
+				span.team__position Creative Director
+				p.team__description Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.
+			.team__col.col
+				img(src='./assets/images/photo3.jpg')
+				h3.team__name Olivia Wilde
+				span.team__position Lead Designer
+				p.team__description Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+			.team__col.col
+				img(src='./assets/images/photo4.jpg')
+				h3.team__name Ashley Greene
+				span.team__position SEO / Developer
+				p.team__description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+
 		script(src='./assets/js/main.js', type='text/javascript')
