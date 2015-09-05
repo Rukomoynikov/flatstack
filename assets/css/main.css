@@ -42,17 +42,21 @@ body {
 }
 .header__button {
   text-transform: uppercase;
-  color: #f57a82;
+  color: #fff;
   padding: 1rem 2rem;
   font-size: 2.5rem;
   text-decoration: none;
-  background-color: #fff;
   border: 2px solid #fff;
   border-radius: 4px;
   font-family: Oxygen;
   letter-spacing: 3px;
   display: inline-block;
   margin-top: 20px;
+}
+.header__button:hover {
+  transition: 0.33s all;
+  background-color: #fff;
+  color: #f57a82;
 }
 .header__nav {
   position: absolute;
@@ -207,9 +211,12 @@ body {
   max-width: 192px;
   margin-right: 85px;
 }
+.member:last-child {
+  margin-right: 0px;
+}
 .member__photo {
   border-radius: 50%;
-  margin-bottom: 40px;
+  margin-bottom: 19px;
 }
 .member__name {
   color: #383838;
@@ -217,7 +224,7 @@ body {
   font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 .member__position {
   color: #383838;
@@ -232,6 +239,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   min-height: 114px;
+  margin-top: 25px;
 }
 .member__link {
   padding: 10px;
@@ -241,6 +249,104 @@ body {
   opacity: 1;
   transition: 0.3s all;
 }
+.skills {
+  min-height: 745px;
+  background-color: #fff;
+}
+.skills__title {
+  font-family: Oxygen;
+  font-size: 38px;
+  font-weight: 300;
+  margin: 0px;
+  text-align: center;
+  letter-spacing: 10px;
+  color: #383838;
+}
+.skills__title:after {
+  content: " ";
+  width: 6%;
+  height: 4px;
+  background: rgba(0,0,0,0.3);
+  display: block;
+  margin: 14px auto 0px auto;
+}
+.skills__subtitle {
+  font-family: "ralewaylight";
+  font-size: 18px;
+  font-weight: 400;
+  color: #383838;
+  max-width: 709px;
+  text-align: center;
+  margin: 33px auto 71px auto;
+}
+.oneSkill__radial {
+  float: left;
+  margin-right: 30px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff6347;
+  background-image: linear-gradient(97deg, #fff 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0)), linear-gradient(249deg, #ff6346 50%, #fff 50%, #fff);
+  transition: 1s all;
+  position: relative;
+}
+.radial > .radial__num {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  position: absolute;
+  top: -30px;
+  -webkit-transform: translateY(50%);
+/* transform: translateY(50%); */
+  border-radius: 50%;
+  right: 10px;
+}
+.reviews {
+  min-height: 894px;
+  background-color: #ed5276;
+  padding-top: 108px;
+}
+.reviews__title {
+  font-family: Oxygen;
+  font-size: 38px;
+  font-weight: 300;
+  margin: 0px;
+  text-align: center;
+  letter-spacing: 10px;
+  color: #fff;
+}
+.reviews__title:after {
+  content: " ";
+  width: 6%;
+  height: 4px;
+  background: rgba(0,0,0,0.3);
+  display: block;
+  margin: 14px auto 0px auto;
+}
+.reviews__subtitle {
+  font-family: "ralewaylight";
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  max-width: 709px;
+  text-align: center;
+  margin: 33px auto 71px auto;
+}
+.footer {
+  height: 212px;
+  background-color: #e7e7e7;
+  text-align: center;
+  padding-top: 57px;
+}
+.footer__subtitle {
+  color: #b2b2b2;
+  font-family: "ralewayextralight";
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* Animation for top menu */
 @-webkit-keyframes showFromtTop {
   from {
     top: -70px;

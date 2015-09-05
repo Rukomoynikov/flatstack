@@ -8,6 +8,7 @@ html
 		link(href="./assets/css/normalize.css", rel="stylesheet")
 		link(href='https://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css')
 		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet")
+		link(href="./assets/fonts/fontawesome/font-awesome.min.css", rel="stylesheet")
 	body
 		header.header
 			.header__redcontainer
@@ -94,4 +95,67 @@ html
 					include ./assets/images/twitter-icon.svg
 				a.member__link(href='#')
 					include ./assets/images/mail-icon.svg
+		section.skills
+			h2.skills__title WE GOT SKILLS!
+			.skills__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.skills_one.oneSkill
+				.oneSkill__radial.radial
+					.radial__num
+				.oneSkill__title
+			.skills_one.oneSkill
+				.oneSkill__radial
+				.oneSkill__title
+			.skills_one.oneSkill
+				.oneSkill__radial
+				.oneSkill__title
+			.skills_one.oneSkill
+				.oneSkill__radial
+				.oneSkill__title
+		section.portfolio
+			h2.portfolio__title OUR PORTFOLIO
+			.portfolio__subtitle Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
+			.portfolioFilter
+				a.portfolioFilter__button.portfolioFilter__button--active
+				a.portfolioFilter__button
+				a.portfolioFilter__button.portfolioFilter__button--choosed
+				a.portfolioFilter__button.portfolioFilter__button--choosed
+			.portfolioElement
+				img.portfolioElement__photo(src='./assets/images/work1.jpg')
+				.portfolioElement__overlay Isometric Perspective Mock-Up
+		section.reviews
+			h2.reviews__title WHAT POEPLE SAY ABOUT US
+			.reviews__subtitle Our clients love us!
+			.reviews__one.review
+				img(src='./assets/images/small-photo1.jpg').review__photo
+				.review__text Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla urna eu nisl scelerisque.
+				.review__name Chanel Iman
+				.review__position CEO of Pinterest
+			.reviews__one.review
+				img(src='./assets/images/small-photo2.jpg').review__photo
+				.review__text Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
+				.review__name Brooklyn Jones
+				.review__position Founder of Instagram
+			.reviews__one.review
+				img(src='./assets/images/small-photo3.jpg').review__photo
+				.review__text Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
+				.review__name Donald Roberts
+				.review__position Lead Designer at Behance
+			.reviews__one.review
+				img(src='./assets/images/small-photo4.jpg').review__photo
+				.review__text Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.
+				.review__name Joe Ward
+				.review__position Co-Founder of Shazam
+		section.contactForm
+			h2.contactForm__title GET IN TOUCH
+			.contactForm__subtitle 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
+			form
+				input(type='text', placeholder='Your Name', required)
+				input(type='email', placeholder='Your Email', required)
+				textarea(placeholder='Your Message' required)
+		footer.footer
+			.footer__subtitle follow us
+			a.footer__link(href='#')
+				include ./assets/images/github-icon.svg
+			a.footer__link(href='#')
+				include ./assets/images/twitter-icon.svg
 		script(src='./assets/js/main.js', type='text/javascript')
