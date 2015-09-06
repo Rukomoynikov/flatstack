@@ -35,9 +35,8 @@ body {
   -webkit-transform: translateX(50%) translateY(50%);
           transform: translateX(50%) translateY(50%);
   position: absolute;
-  right: 49%;
-  bottom: 46%;
-  padding-left: 62px;
+  right: 50%;
+  bottom: 50%;
 }
 .header__button {
   text-transform: uppercase;
@@ -157,7 +156,7 @@ body {
 .oneService svg {
   height: 126px;
 }
-.oneService svghover > path {
+.oneService svg:hover > path {
   fill: #000;
 }
 .oneService__title {
@@ -247,11 +246,15 @@ body {
 }
 .member__link {
   padding: 10px;
+  font-size: 0px;
 }
 .member__link:hover svg > path {
   fill: #000;
   opacity: 1;
   transition: 0.3s all;
+}
+.member__link svg {
+  height: 12px;
 }
 .skills {
   min-height: 745px;
@@ -338,12 +341,20 @@ body {
   text-align: center;
   margin: 33px auto 71px auto;
 }
+.reviews__container {
+  width: 1086px;
+  margin: 0px auto;
+}
 .review {
   display: inline-block;
-  max-width: 486px;
-  margin-right: 120px;
+  width: calc(50% - 60px);
+  margin-right: 60px;
   vertical-align: top;
   margin-bottom: 178px;
+}
+.review:nth-of-type(2n) {
+  margin-left: 60px;
+  margin-right: 0px;
 }
 .review__photo {
   border-radius: 50%;
@@ -355,7 +366,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   text-align: left;
-  margin-bottom: 27px;
+  margin-left: 144px;
 }
 .review__name {
   text-align: left;
@@ -364,6 +375,7 @@ body {
   font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-top: 27px;
 }
 .review__position {
   text-align: left;
@@ -372,6 +384,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-top: 13px;
 }
 .portfolio {
   background: #000;
@@ -576,6 +589,18 @@ body {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-bottom: 41px;
+}
+.footer__link {
+  height: 44px;
+  font-size: 0px;
+  padding: 0px 15px;
+}
+.footer__link svg {
+  height: 44px;
+}
+.footer__link svg:hover > path {
+  fill: #000;
 }
 /* Animation for top menu */
 @-webkit-keyframes showFromtTop {
