@@ -115,43 +115,79 @@ html
 			h2.portfolio__title OUR PORTFOLIO
 			.portfolio__subtitle Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
 			.portfolioFilter
-				a.portfolioFilter__button.portfolioFilter__button--active
-				a.portfolioFilter__button
-				a.portfolioFilter__button.portfolioFilter__button--choosed
-				a.portfolioFilter__button.portfolioFilter__button--choosed
+				a(href='#').portfolioFilter__button.portfolioFilter__button--active ALL
+				a(href='#').portfolioFilter__button WEB
+				a(href='#').portfolioFilter__button.portfolioFilter__button--choosed APPS
+				a(href='#').portfolioFilter__button.portfolioFilter__button--choosed ICONS
 			.portfolioElement
 				img.portfolioElement__photo(src='./assets/images/work1.jpg')
-				.portfolioElement__overlay Isometric Perspective Mock-Up
+				.portfolioElement__overlay 
+					div Isometric 
+						br 
+						| Perspective 
+						br 
+						| Mock-Up
+			.portfolioElement
+				img.portfolioElement__photo(src='./assets/images/work2.jpg')
+				.portfolioElement__overlay 
+					div Time Zone App UI
+			.portfolioElement
+				img.portfolioElement__photo(src='./assets/images/work3.jpg')
+				.portfolioElement__overlay 
+					div Viro Media Players UI
+			.portfolioElement
+				img.portfolioElement__photo(src='./assets/images/work4.jpg')
+				.portfolioElement__overlay 
+					div Isometric Perspective Mock-Up
+			.portfolioElement
+				img.portfolioElement__photo(src='./assets/images/work5.jpg')
+				.portfolioElement__overlay 
+					div Time Zone App UI
+			.portfolioElement
+				img.portfolioElement__photo(src='./assets/images/work6.jpg')
+				.portfolioElement__overlay 
+					div Isometric 
+						br 
+						| Perspective 
+						br 
+						| Mock-Up
 		section.reviews
 			h2.reviews__title WHAT POEPLE SAY ABOUT US
 			.reviews__subtitle Our clients love us!
 			.reviews__one.review
-				img(src='./assets/images/small-photo1.jpg').review__photo
+				img(src='./assets/images/small-photo1.jpg', align='left').review__photo
 				.review__text Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla urna eu nisl scelerisque.
-				.review__name Chanel Iman
-				.review__position CEO of Pinterest
+					.review__name Chanel Iman
+					.review__position CEO of Pinterest
 			.reviews__one.review
-				img(src='./assets/images/small-photo2.jpg').review__photo
+				img(src='./assets/images/small-photo2.jpg', align='left').review__photo
 				.review__text Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
-				.review__name Brooklyn Jones
-				.review__position Founder of Instagram
+					.review__name Brooklyn Jones
+					.review__position Founder of Instagram
 			.reviews__one.review
-				img(src='./assets/images/small-photo3.jpg').review__photo
+				img(src='./assets/images/small-photo3.jpg', align='left').review__photo
 				.review__text Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.
-				.review__name Donald Roberts
-				.review__position Lead Designer at Behance
+					.review__name Donald Roberts
+					.review__position Lead Designer at Behance
 			.reviews__one.review
-				img(src='./assets/images/small-photo4.jpg').review__photo
+				img(src='./assets/images/small-photo4.jpg', align='left').review__photo
 				.review__text Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.
-				.review__name Joe Ward
-				.review__position Co-Founder of Shazam
+					.review__name Joe Ward
+					.review__position Co-Founder of Shazam
 		section.contactForm
 			h2.contactForm__title GET IN TOUCH
 			.contactForm__subtitle 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
-			form
-				input(type='text', placeholder='Your Name', required)
-				input(type='email', placeholder='Your Email', required)
-				textarea(placeholder='Your Message' required)
+			form.form
+				.form__group
+					input.form__input(type='text', placeholder='Your Name', required)
+					span.form__error error message
+				.form__group.form__group--second
+					input.form__input(type='email', placeholder='Your Email', required)
+					span.form__error error message
+				.form__group.form__group--fullwidth
+					textarea.form__input.form__input--textarea(placeholder='Your Message' required)
+					span.form__error error message
+				input.form__submit(type='submit')
 		footer.footer
 			.footer__subtitle follow us
 			a.footer__link(href='#')

@@ -36,7 +36,6 @@ html, body
 		position: absolute;
 		right: 49%;
 		bottom: 46%;
-		white-space:nowrap;
 		padding-left: 62px;
 		
 	&__button
@@ -81,6 +80,11 @@ html, body
 				&--active
 					border 1px solid white;
 					border-radius: 4px;
+					
+					&:hover
+						background white
+						color #383838
+						transition 0.3s all
 					
 				&:hover
 					box-shadow: 0 0 1px #fff;
@@ -312,6 +316,7 @@ html, body
 	min-height: 894px;
 	background-color: #ed5276;
 	padding-top 108px
+	text-align center
 	
 	&__title
 		font-family: Oxygen;
@@ -338,7 +343,231 @@ html, body
 		max-width 709px
 		text-align center
 		margin 33px auto 71px auto
+		
+.review
+	display inline-block
+	max-width 486px
+	margin-right 120px
+	vertical-align top
+	margin-bottom 178px
+	
+	&__photo
+		border-radius 50%
+		margin-right 48px
+		
+	&__text
+		color: white;
+		font-family: "ralewayextralight";
+		font-size: 18px;
+		font-weight: 400;
+		text-align left
+		margin-bottom 27px
+		
+	&__name
+		text-align left
+		color: white;
+		font-family: "Oxygen";
+		font-size: 22px;
+		font-weight: 400;
+		text-transform: uppercase;
+		
+	&__position
+		text-align left
+		color: white;
+		font-family: "ralewayextralight"
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
 
+.portfolio
+	background black
+	padding-top 109px
+	text-align center
+	font-size 0px
+	
+	&__title
+		font-family: "Oxygen";
+		font-size: 38px;
+		font-weight: 300;
+		margin 0px
+		text-align center
+		letter-spacing 10px
+		color: white
+		
+		&:after
+			content " "
+			width 6%
+			height 4px
+			background alpha(#fff, 0.3)
+			display block
+			margin 14px auto 0px auto
+		
+	&__subtitle
+		font-family: "ralewaylight"
+		font-size: 18px;
+		font-weight: 400;
+		color: white
+		max-width 709px
+		text-align center
+		margin 33px auto 71px auto
+		
+.portfolioFilter
+	margin 43px	0px 43px 0px
+	
+	&__button
+		color: white;
+		font-family: "ralewayextralight";
+		font-size: 18px;
+		font-weight: 400;
+		padding 1em 2em
+		border-radius: 4px;
+		margin-right 10px
+		text-decoration none
+		
+		&--choosed
+			background-color: #f4cda5;
+			border: 2px solid #f4cda5;
+			
+		&--active
+			border: 2px solid white;
+			
+.portfolioElement
+	position relative
+	display inline-block
+	width 33%
+	overflow hidden
+	
+	&:hover .portfolioElement__overlay
+		display block
+		animation showFromtTop 1s
+	
+	&__photo
+		width 100%
+		
+	&__overlay
+		position absolute
+		left 0px
+		top 0px
+		background #612b1a
+		width 100%
+		height 100%
+		color: white;
+		font-family: "ralewayextralight";
+		font-size: 38px;
+		text-transform: uppercase;
+		font-weight: 300;
+		text-align center
+		display none
+		
+		div
+			width 100%
+			text-align center
+			letter-spacing 2px
+			position absolute
+			top 50%
+			transform translateY(-50%)
+			line-height: 58px;
+
+.contactForm
+	min-height 819px;
+	padding-top 109px
+	text-align center
+
+	&__title
+		font-family: Oxygen;
+		font-size: 38px;
+		font-weight: 300;
+		margin 0px
+		text-align center
+		letter-spacing 10px
+		color: #383838;
+		
+		&:after
+			content " "
+			width 6%
+			height 4px
+			background alpha(#000, 0.3)
+			display block
+			margin 14px auto 0px auto
+		
+	&__subtitle
+		font-family: "ralewaylight"
+		font-size: 18px;
+		font-weight: 400;
+		color: #383838
+		max-width 709px
+		text-align center
+		margin 33px auto 71px auto
+		
+.form
+	max-width 860px
+	display block
+	margin 0px auto
+	
+	&__group
+		width calc(50% - 32px)
+		margin-right 32px		
+		display inline-block
+		position relative
+		
+		&--second
+			width 50%
+			margin-right 0px
+			
+		&--fullwidth
+			width 100%
+			margin-right 0px
+
+	&__input
+		border: 1px solid #d7d7d7;
+		border-radius: 4px;
+		height: 56px;
+		color: #383838;
+		font-family: "ralewayextralight";
+		font-size: 18px;
+		font-weight: 400;
+		padding-left 25px
+		outline none
+		width 100%
+		
+		&:focus,:hover
+			border: 1px solid #383838;
+			
+		&:focus:invalid
+			border: 2px solid #f57a82;
+
+		&--textarea
+			padding-top 25px
+			width 100%
+			margin-right 0px
+			margin-top 27px
+			height 200px
+			
+	&__error
+		position absolute
+		bottom: -20px;
+		left: 25px;
+		color: #ed5276;
+		font-family: "ralewayextralight";
+		font-size: 12px;
+		font-weight: 400;
+		text-transform uppercase
+		text-transform: uppercase;
+		
+			
+	&__submit
+		background-color: #ed5276;
+		border-radius: 4px;
+		border 0px 
+		outline none
+		color: white;
+		font-family: "Oxygen";
+		font-size: 25px;
+		font-weight: 700;
+		letter-spacing 2px 
+		padding: 1rem 2rem;
+		margin-top 59px
+			
 .footer
 	height: 212px;
 	background-color: #e7e7e7;
