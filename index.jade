@@ -7,7 +7,7 @@ html
 		link(href="./assets/css/normalize.css", rel="stylesheet")
 		link(href="./assets/css/main.css", rel="stylesheet")
 		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet")
-		//- link(href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css')
 	body
 		header.header
 			.header__redcontainer
@@ -182,15 +182,15 @@ html
 			.contactForm__subtitle 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
 			form.form
 				.form__group
-					input.form__input(type='text', placeholder='Your Name', required)
-					span.form__error error message
+					input.form__input(type='text', placeholder='Your Name', name='name')
+					span.form__error Как вас зовут?
 				.form__group.form__group--second
-					input.form__input(type='email', placeholder='Your Email', required)
-					span.form__error error message
+					input.form__input(type='email', placeholder='Your Email', name='email', required)
+					span.form__error А можно узнать ваш email?
 				.form__group.form__group--fullwidth
-					textarea.form__input.form__input--textarea(placeholder='Your Message' required)
-					span.form__error error message
-				input.form__submit(type='submit')
+					textarea.form__input.form__input--textarea(placeholder='Your Message', name='message', required)
+					span.form__error Ну, теперь рассказывайте!
+				input.form__submit(type='submit', value='SUBMIT')
 		footer.footer
 			.footer__subtitle follow us
 			a.footer__link(href='#')

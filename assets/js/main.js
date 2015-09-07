@@ -29,8 +29,34 @@ diagrams.forEach(function(el){
 	// Хак, для того чтобы начало бара было там где должно быть, иначе начинается справа на отметке 90%.
 	var required_rotate = 275 + Number(bar_offset);
 	svg.style.transform = "rotateZ(" + required_rotate + "deg)";
+	svg.style['-webkit-transform'] = "rotateZ(" + required_rotate + "deg)";
 })
 
 // Form validation
 var form = document.querySelector('form');
-form.addEventListener('submit');
+var name_field = document.querySelector('form [name="name"]');
+var name_field_label = document.querySelector('form [name="name"] + span');
+var email_field = document.querySelector('form [name="email"]');
+var email_field_label = document.querySelector('form [name="name"] + span');
+var message_field = document.querySelector('form [name="message"]');
+var message_field_label = document.querySelector('form [name="name"] + span');
+form.addEventListener('submit', checkFields);
+
+function checkFields(event){
+	event.preventDefault();
+	var error = false;
+	if (name_field.value === ''){
+		error = true;
+		name_field_label.style.display = 'inline-block';
+	} else if (email_field.value === '') {
+		error = true;
+		email_field_label.style.display = 'inline-block';
+	} else if (message_field.value === '') {
+		error = true;
+		message_field_label.style.display = 'inline-block';
+	};
+
+	if (error != true) {
+		form.submit();
+	}
+}

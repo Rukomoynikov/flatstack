@@ -567,6 +567,9 @@ html, body
 			
 		&:focus:invalid
 			border: 2px solid #f57a82;
+			
+		&:focus:invalid + span
+			display inline-block
 
 		&--textarea
 			padding-top 25px
@@ -599,7 +602,7 @@ html, body
 		letter-spacing 2px 
 		padding: 1rem 2rem;
 		margin-top 59px
-			
+					
 .footer
 	height: 212px;
 	background-color: #e7e7e7;

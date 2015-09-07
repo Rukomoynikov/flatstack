@@ -563,6 +563,9 @@ body {
 .form__input:focus:invalid {
   border: 2px solid #f57a82;
 }
+.form__input:focus:invalid + span {
+  display: inline-block;
+}
 .form__input--textarea {
   padding-top: 25px;
   width: 100%;
