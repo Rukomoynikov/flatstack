@@ -3,12 +3,11 @@ html
 	head
 		title FlatStack Frontend Test
 		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width')
-		link(href="./assets/css/main.css", rel="stylesheet")
+		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(href="./assets/css/normalize.css", rel="stylesheet")
-		link(href='https://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css')
+		link(href="./assets/css/main.css", rel="stylesheet")
 		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet")
-		link(href="./assets/fonts/fontawesome/font-awesome.min.css", rel="stylesheet")
+		link(href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css')
 	body
 		header.header
 			.header__redcontainer
@@ -99,18 +98,21 @@ html
 			h2.skills__title WE GOT SKILLS!
 			.skills__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			.skills_one.oneSkill
-				.oneSkill__radial.radial
-					.radial__num
-				.oneSkill__title
+				include ./assets/images/radial.svg 
+				.oneSkill__num 90
+				.oneSkill__title web Design
 			.skills_one.oneSkill
-				.oneSkill__radial
-				.oneSkill__title
+				include ./assets/images/radial.svg 
+				.oneSkill__num 75
+				.oneSkill__title HTML / CSS
 			.skills_one.oneSkill
-				.oneSkill__radial
-				.oneSkill__title
+				include ./assets/images/radial.svg 
+				.oneSkill__num 70
+				.oneSkill__title GRAPHIC DESIGN
 			.skills_one.oneSkill
-				.oneSkill__radial
-				.oneSkill__title
+				include ./assets/images/radial.svg 
+				.oneSkill__num 85
+				.oneSkill__title UI / UX
 		section.portfolio
 			h2.portfolio__title OUR PORTFOLIO
 			.portfolio__subtitle Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
