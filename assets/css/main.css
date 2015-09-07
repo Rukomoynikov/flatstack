@@ -8,9 +8,10 @@ body {
   margin: 0px;
   font-family: "raleway";
   font-size: 10px;
+  height: 100%;
 }
 .header {
-  height: 596px;
+  height: 100%;
   background: url("../images/headerbg.jpg");
   position: relative;
   z-index: 100;
@@ -28,7 +29,7 @@ body {
 .header__slogan {
   vertical-align: middle;
   color: #f7f3ea;
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   font-weight: 300;
   font-family: "ralewaythin";
   text-align: center;
@@ -175,10 +176,11 @@ body {
   min-height: 747px;
   padding-top: 100px;
   text-align: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .service {
-    padding: 0px 10px;
+    padding: 100px 10px 0px 10px;
   }
 }
 .service__title {
@@ -253,7 +255,7 @@ body {
 .team {
   min-height: 914px;
   background: #eefafb;
-  padding-top: 100px;
+  padding: 100px 0px 50px 10px;
   text-align: center;
   margin-bottom: 100px;
 }
@@ -415,8 +417,17 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(calc(-50% - 28px));
-          transform: translateX(-50%) translateY(calc(-50% - 28px));
+  -webkit-transform: translateX(-50%) translateY(calc(-50% - 35px));
+          transform: translateX(-50%) translateY(calc(-50% - 35px));
+}
+.oneSkill--pink svg circle + circle {
+  stroke: #ed5276;
+}
+.oneSkill--lightGreen svg circle + circle {
+  stroke: #5db5a4;
+}
+.oneSkill--rose svg circle + circle {
+  stroke: #f57a82;
 }
 .oneSkill svg {
   -webkit-transform-origin: 50% 50%;
@@ -579,7 +590,7 @@ body {
 .portfolioElement {
   position: relative;
   display: inline-block;
-  width: 33%;
+  width: 33.33%;
   overflow: hidden;
 }
 @media screen and (max-width: 767px) {

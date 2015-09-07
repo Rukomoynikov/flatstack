@@ -15,16 +15,16 @@ html
 					a.nav__openMenu(href='#', id='openmenu') МЕНЮ
 					ul.nav__menu.menu
 						a(href='').menu__element.menu__element--active Home
-						a(href='').menu__element About
-						a(href='').menu__element WORK
+						a(href='#service').menu__element About
+						a(href='#portfolio').menu__element WORK
 						a(href='').menu__element Blog
-						a(href='').menu__element Contact
+						a(href='#contact').menu__element Contact
 				.header__slogan Hi there! We are the new kids on the block
 					br 
 					| and we build awesome websites and mobile apps
 					br
 					a(href='').header__button WORK WITH US!
-		section.service
+		section.service#service
 			h2.service__title SERVICES WE PROVIDE
 			.service__subtitle We are working with both individuals and businesses from all over the globe to create awesome websites and applications.
 			.oneService
@@ -101,19 +101,19 @@ html
 				include ./assets/images/radial.svg 
 				.oneSkill__num 90
 				.oneSkill__title web Design
-			.skills_one.oneSkill
+			.skills_one.oneSkill.oneSkill--pink
 				include ./assets/images/radial.svg 
 				.oneSkill__num 75
 				.oneSkill__title HTML / CSS
-			.skills_one.oneSkill
+			.skills_one.oneSkill.oneSkill--lightGreen
 				include ./assets/images/radial.svg 
 				.oneSkill__num 70
 				.oneSkill__title GRAPHIC DESIGN
-			.skills_one.oneSkill
+			.skills_one.oneSkill.oneSkill--rose
 				include ./assets/images/radial.svg 
 				.oneSkill__num 85
 				.oneSkill__title UI / UX
-		section.portfolio
+		section.portfolio#portfolio
 			h2.portfolio__title OUR PORTFOLIO
 			.portfolio__subtitle Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
 			.portfolioFilter
@@ -177,7 +177,7 @@ html
 					.review__text Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.
 						.review__name Joe Ward
 						.review__position Co-Founder of Shazam
-		section.contactForm
+		section.contactForm#contact
 			h2.contactForm__title GET IN TOUCH
 			.contactForm__subtitle 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
 			form.form

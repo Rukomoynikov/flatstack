@@ -11,10 +11,11 @@ html, body
 	margin 0px
 	font-family base-font
 	font-size 10px
+	height 100%
 
 // Блок шапка с цветной подложкой, слоганом и кнопкой.
 .header
-	height 596px 
+	height 100%
 	background url('../images/headerbg.jpg')
 	position relative
 	z-index 100
@@ -32,7 +33,7 @@ html, body
 	&__slogan
 		vertical-align middle
 		color: #f7f3ea;
-		font-size: 3.8rem
+		font-size: 3.5rem
 		font-weight: 300;
 		font-family: thin-font
 		text-align center
@@ -166,8 +167,9 @@ html, body
 	min-height 747px
 	padding-top 100px
 	text-align center
+	overflow hidden
 	@media screen and (max-width: 767px)
-		padding 0px 10px
+		padding 100px 10px 0px 10px
 
 	&__title
 		font-family: additional-font
@@ -241,7 +243,7 @@ html, body
 .team
 	min-height 914px;
 	background #eefafb;
-	padding-top 100px
+	padding 100px 0px 50px 10px
 	text-align center
 	margin-bottom 100px
 	
@@ -391,10 +393,19 @@ html, body
 		position absolute
 		top 50%
 		left 50%
-		transform translateX(-50%) translateY(calc(-50% - 28px))
+		transform translateX(-50%) translateY(calc(-50% - 35px))
 		
+	&--pink svg circle + circle
+		stroke #ed5276
+		
+	&--lightGreen svg circle + circle
+		stroke #5db5a4
+		
+	&--rose svg circle + circle
+		stroke #f57a82
+
+	// Анимация заполнения бара	
 	svg 
-		// transform: rotateZ(225deg);
 		transform-origin: 50% 50%;
 		
 		circle
