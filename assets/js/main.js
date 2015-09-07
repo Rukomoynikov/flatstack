@@ -9,6 +9,10 @@ function listener (){
 	} else {
 		navigationPanel.classList.remove("header__nav--fixed")
 	}
+
+	if (menu.classList.length > 2) {
+		menu.classList.remove('menu--visible')
+	}
 }
 
 // Make radial diagrams
@@ -58,5 +62,19 @@ function checkFields(event){
 
 	if (error != true) {
 		form.submit();
+	}
+}
+
+// Menu for small viewports
+var menu_button = document.querySelector("#openmenu");
+var menu = document.querySelector('.menu');
+menu_button.addEventListener('click', openMenu);
+
+function openMenu (event){
+	event.preventDefault();
+	if (menu.classList.length < 3) {
+		menu.classList.add('menu--visible');
+	} else {
+		menu.classList.remove('menu--visible')
 	}
 }
