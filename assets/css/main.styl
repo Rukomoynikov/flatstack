@@ -12,7 +12,7 @@ html, body
 	font-family base-font
 	font-size 66%
 
-// Starting header section
+// Блок шапка с цветной подложкой, слоганом и кнопкой.
 .header
 	height 596px 
 	background url('../images/headerbg.jpg')
@@ -40,6 +40,7 @@ html, body
 		position: absolute;
 		right: 50%;
 		bottom: 50%;
+		width: 867px;
 		
 	&__button
 		text-transform uppercase
@@ -53,7 +54,7 @@ html, body
 		font-weight: 700;
 		letter-spacing 3px
 		display inline-block 
-		margin-top 20px
+		margin-top 54px
 		
 		&:hover
 			transition 0.33s all
@@ -162,8 +163,8 @@ html, body
 	svg
 		height 126px
 		
-		&:hover > path
-			fill black
+		// &:hover > path
+		// 	stroke #383838
 
 	&__title
 		font-family: additional-font
@@ -221,6 +222,9 @@ html, body
 	vertical-align top
 	max-width 192px
 	margin-right 85px
+	@media screen and (max-width: 760px)
+		&:nth-of-type(2n)
+			margin-right 0px
 	
 	&:last-child
 		margin-right 0px
@@ -303,18 +307,6 @@ html, body
 	&:last-child
 		margin-right 0px
 	
-	// &__radial
-	// 	float: left;
-	// 	margin-right: 30px;
-	// 	position: relative;
-	// 	width: 100px;
-	// 	height: 100px;
-	// 	border-radius: 50%;
-	// 	background-color: tomato;
-	// 	background-image: linear-gradient(97deg, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0)), linear-gradient(249deg, #FF6346 50%, white 50%, white);
-	// 	transition 1s all
-	// 	position relative
-	
 	&__title
 		text-align center
 		color: #383838;
@@ -334,18 +326,13 @@ html, body
 		top 50%
 		left 50%
 		transform translateX(-50%) translateY(calc(-50% - 28px))
-		// transform translateY(50%)
 		
-// .radial > .radial__num
-// 	width: 80px;
-// 	height: 80px;
-// 	background: #fff;
-// 	position: absolute;
-// 	top: -30px;
-// 	-webkit-transform: translateY(50%);
-// 	/* transform: translateY(50%); */
-// 	border-radius: 50%;
-// 	right: 10px;
+	svg 
+		// transform: rotateZ(225deg);
+		transform-origin: 50% 50%;
+		
+		circle
+			transition: stroke-dashoffset 1s linear;
 	
 .reviews
 	min-height: 894px;
@@ -540,7 +527,7 @@ html, body
 		font-size: 18px;
 		font-weight: 400;
 		color: #383838
-		max-width 709px
+		// max-width 709px
 		text-align center
 		margin 33px auto 71px auto
 		
@@ -598,7 +585,7 @@ html, body
 		font-weight: 400;
 		text-transform uppercase
 		text-transform: uppercase;
-		
+		display none
 			
 	&__submit
 		background-color: #ed5276;

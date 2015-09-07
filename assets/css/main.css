@@ -37,6 +37,7 @@ body {
   position: absolute;
   right: 50%;
   bottom: 50%;
+  width: 867px;
 }
 .header__button {
   text-transform: uppercase;
@@ -50,7 +51,7 @@ body {
   font-weight: 700;
   letter-spacing: 3px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 54px;
 }
 .header__button:hover {
   transition: 0.33s all;
@@ -157,9 +158,6 @@ body {
 .oneService svg {
   height: 126px;
 }
-.oneService svg:hover > path {
-  fill: #000;
-}
 .oneService__title {
   font-family: 'Oxygen';
   font-size: 22px;
@@ -214,6 +212,11 @@ body {
   vertical-align: top;
   max-width: 192px;
   margin-right: 85px;
+}
+@media screen and (max-width: 760px) {
+  .member:nth-of-type(2n) {
+    margin-right: 0px;
+  }
 }
 .member:last-child {
   margin-right: 0px;
@@ -316,6 +319,13 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(calc(-50% - 28px));
           transform: translateX(-50%) translateY(calc(-50% - 28px));
+}
+.oneSkill svg {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.oneSkill svg circle {
+  transition: stroke-dashoffset 1s linear;
 }
 .reviews {
   min-height: 894px;
@@ -512,7 +522,6 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: #383838;
-  max-width: 709px;
   text-align: center;
   margin: 33px auto 71px auto;
 }
@@ -571,6 +580,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   text-transform: uppercase;
+  display: none;
 }
 .form__submit {
   background-color: #ed5276;

@@ -1,11 +1,6 @@
-<svg id="svg" width="160" height="160" viewPort="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
-	<circle r='60' cx='80' cy='80' fill="transparent" stroke='#f7f7f7' stroke-dashoffset="0" stroke-dasharray='565.67px' stroke-width='2em'>
+<svg id="" width="160" height="160" viewPort="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<circle r='60' cx='80' cy='80' fill="transparent" stroke='#f7f7f7' stroke-width='1em'>
 	</circle>
-	<circle r='60' cx='80' cy='80' fill="transparent" stroke='#3c989e' stroke-dashoffset="141px" stroke-dasharray='565.67px' stroke-width='2em'>
-		<animate attributeType='CSS' attributeName='stroke-dashoffset' from='0' to='141px' dur='1s' />
+	<circle r='60' cx='80' cy='80' fill="transparent" stroke='#3c989e' stroke-width='2em'>
 	</circle>
-	<!-- 
-		Длина круга при радиусе 90 ( 3.14 * 90 * 2) - 565.
-		Следовательно 75% от 565 - ((100 минус процент) / 100) * радиус, то есть ((100 - 75) / 100) * 565
-	 -->
 </svg>
