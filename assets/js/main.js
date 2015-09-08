@@ -78,3 +78,15 @@ function openMenu (event){
 		menu.classList.remove('menu--visible')
 	}
 }
+
+// Filter portfolio
+var filterButtons = document.querySelectorAll('.portfolioFilter__button');
+filterButtons.forEach(function(el){
+	el.addEventListener('click', filterPortfolio)
+})
+
+function filterPortfolio(event){
+	event.preventDefault();
+	console.log(event);
+	console.log(event.target.dataset.innerText)
+}

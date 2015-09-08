@@ -7,7 +7,7 @@ html
 		link(href="./assets/css/normalize.css", rel="stylesheet")
 		link(href="./assets/css/main.css", rel="stylesheet")
 		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet")
-		//- link(href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css')
 	body
 		header.header
 			.header__redcontainer
@@ -117,10 +117,10 @@ html
 			h2.portfolio__title OUR PORTFOLIO
 			.portfolio__subtitle Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
 			.portfolioFilter
-				a(href='#').portfolioFilter__button.portfolioFilter__button--active ALL
-				a(href='#').portfolioFilter__button WEB
-				a(href='#').portfolioFilter__button.portfolioFilter__button--choosed APPS
-				a(href='#').portfolioFilter__button.portfolioFilter__button--choosed ICONS
+				a(href='#', data-tag='all').portfolioFilter__button.portfolioFilter__button--active ALL
+				a(href='#', data-tag='web').portfolioFilter__button WEB
+				a(href='#', data-tag='apps').portfolioFilter__button.portfolioFilter__button--choosed APPS
+				a(href='#', data-tag='icons').portfolioFilter__button.portfolioFilter__button--choosed ICONS
 			.portfolioElement
 				img.portfolioElement__photo(src='./assets/images/work1.jpg')
 				.portfolioElement__overlay 
