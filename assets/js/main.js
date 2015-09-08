@@ -18,6 +18,8 @@ function listener (){
 // Make radial diagrams
 var diagrams = document.querySelectorAll('.oneSkill');
 Object.prototype.forEach = Array.prototype.forEach;
+Object.prototype.filter = Array.prototype.filter;
+Object.prototype.indexOf = Array.prototype.indexOf;
 
 diagrams.forEach(function(el){
 	var svg = el.childNodes[0];
@@ -85,8 +87,23 @@ filterButtons.forEach(function(el){
 	el.addEventListener('click', filterPortfolio)
 })
 
+var portfolioElements = document.querySelectorAll('.portfolioElement');
+
 function filterPortfolio(event){
 	event.preventDefault();
-	console.log(event);
-	console.log(event.target.dataset.innerText)
+	event.target.classList.add("portfolioFilter__button--choosed");
+	var requiredTag = event.target.dataset.tag;
+	var filteredPortfolioElements = portfolioElements.filter(function(element){
+		var element_tags = element.dataset.tags.split(',');
+		if (element_tags.indexOf(requiredTag) >= 0) {
+			return false
+		} else {
+			return true
+			
+		}
+	});
+
+	filteredPortfolioElements.forEach(function(element){
+		element.style.display = 'none';
+	})
 }

@@ -171,28 +171,74 @@ body {
 .header .nav--fixed .menu .menu__element:hover {
   box-shadow: 0 0 1px #fff;
 }
-.service {
-  background-color: #5db5a4;
-  min-height: 747px;
+.section {
   padding-top: 100px;
   text-align: center;
   overflow: hidden;
 }
+.section--service {
+  background-color: #5db5a4;
+  min-height: 747px;
+}
 @media screen and (max-width: 767px) {
-  .service {
+  .section--service {
     padding: 100px 10px 0px 10px;
   }
 }
-.service__title {
+.section--team {
+  min-height: 914px;
+  background: #eefafb;
+  padding: 100px 0px 50px 10px;
+}
+.section--skills {
+  padding-bottom: 100px;
+  background-color: #fff;
+  text-align: center;
+}
+.section--portfolio {
+  background: #000;
+  font-size: 0px;
+}
+.section--reviews {
+  background-color: #ed5276;
+}
+.section--contactForm {
+  min-height: 819px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section--contactForm {
+    padding: 109px 10px 0px 10px;
+  }
+}
+.section--footer {
+  min-height: 212px;
+  background-color: #e7e7e7;
+  padding-top: 57px;
+}
+.section__title {
   font-family: 'Oxygen';
   font-size: 3.8rem;
   font-weight: 300;
   margin: 0px;
   text-align: center;
   letter-spacing: 10px;
+}
+.section__title--service {
   color: #fff;
 }
-.service__title:after {
+.section__title--team {
+  color: #383838;
+}
+.section__title--reviews {
+  color: #fff;
+}
+.section__title--portfolio {
+  color: #fff;
+}
+.section__title--contactForm {
+  color: #383838;
+}
+.section__title:after {
   content: " ";
   width: 6%;
   height: 4px;
@@ -200,14 +246,34 @@ body {
   display: block;
   margin: 14px auto 0px auto;
 }
-.service__subtitle {
+.section__subtitle {
   font-family: 'ralewayextralight';
   font-size: 1.8rem;
   font-weight: 400;
-  color: #fff;
   max-width: 709px;
   text-align: center;
   margin: 33px auto 71px auto;
+}
+.section__subtitle--service {
+  color: #fff;
+}
+.section__subtitle--team {
+  color: #383838;
+}
+.section__subtitle--reviews {
+  color: #fff;
+}
+.section__subtitle--portfolio {
+  color: #fff;
+}
+.section__subtitle--contactForm {
+  color: #383838;
+}
+.section__subtitle--footer {
+  color: #b2b2b2;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 41px;
 }
 .oneService {
   display: inline-block;
@@ -264,39 +330,6 @@ body {
   font-weight: 400;
   line-height: 25px;
   font-family: 'ralewayextralight';
-}
-.team {
-  min-height: 914px;
-  background: #eefafb;
-  padding: 100px 0px 50px 10px;
-  text-align: center;
-  margin-bottom: 100px;
-}
-.team__title {
-  font-family: 'Oxygen';
-  font-size: 3.8rem;
-  font-weight: 300;
-  margin: 0px;
-  text-align: center;
-  letter-spacing: 10px;
-  color: #383838;
-}
-.team__title:after {
-  content: " ";
-  width: 6%;
-  height: 4px;
-  background: rgba(0,0,0,0.3);
-  display: block;
-  margin: 14px auto 0px auto;
-}
-.team__subtitle {
-  font-family: 'ralewayextralight';
-  font-size: 18px;
-  font-weight: 400;
-  color: #383838;
-  max-width: 709px;
-  text-align: center;
-  margin: 33px auto 71px auto;
 }
 .member {
   display: inline-block;
@@ -368,11 +401,6 @@ body {
 }
 .member__link svg {
   height: 12px;
-}
-.skills {
-  min-height: 645px;
-  background-color: #fff;
-  text-align: center;
 }
 .skills__title {
   font-family: 'Oxygen';
@@ -465,38 +493,6 @@ body {
 .oneSkill svg circle {
   transition: stroke-dashoffset 1s linear;
 }
-.reviews {
-  min-height: 894px;
-  background-color: #ed5276;
-  padding-top: 108px;
-  text-align: center;
-}
-.reviews__title {
-  font-family: 'Oxygen';
-  font-size: 3.8rem;
-  font-weight: 300;
-  margin: 0px;
-  text-align: center;
-  letter-spacing: 10px;
-  color: #fff;
-}
-.reviews__title:after {
-  content: " ";
-  width: 6%;
-  height: 4px;
-  background: rgba(0,0,0,0.3);
-  display: block;
-  margin: 14px auto 0px auto;
-}
-.reviews__subtitle {
-  font-family: 'ralewayextralight';
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #fff;
-  max-width: 709px;
-  text-align: center;
-  margin: 33px auto 71px auto;
-}
 .reviews__container {
   max-width: 1086px;
   margin: 0px auto;
@@ -571,38 +567,6 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 13px;
-}
-.portfolio {
-  background: #000;
-  padding-top: 109px;
-  text-align: center;
-  font-size: 0px;
-}
-.portfolio__title {
-  font-family: 'Oxygen';
-  font-size: 3.8rem;
-  font-weight: 300;
-  margin: 0px;
-  text-align: center;
-  letter-spacing: 10px;
-  color: #fff;
-}
-.portfolio__title:after {
-  content: " ";
-  width: 6%;
-  height: 4px;
-  background: rgba(255,255,255,0.3);
-  display: block;
-  margin: 14px auto 0px auto;
-}
-.portfolio__subtitle {
-  font-family: 'ralewayextralight';
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #fff;
-  max-width: 709px;
-  text-align: center;
-  margin: 33px auto 71px auto;
 }
 .portfolioFilter {
   margin: 43px 0px 43px 0px;
@@ -685,41 +649,6 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.contactForm {
-  min-height: 819px;
-  padding-top: 109px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .contactForm {
-    padding: 109px 10px 0px 10px;
-  }
-}
-.contactForm__title {
-  font-family: 'Oxygen';
-  font-size: 3.8rem;
-  font-weight: 300;
-  margin: 0px;
-  text-align: center;
-  letter-spacing: 10px;
-  color: #383838;
-}
-.contactForm__title:after {
-  content: " ";
-  width: 6%;
-  height: 4px;
-  background: rgba(0,0,0,0.3);
-  display: block;
-  margin: 14px auto 0px auto;
-}
-.contactForm__subtitle {
-  font-family: 'ralewayextralight';
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #383838;
-  text-align: center;
-  margin: 33px auto 71px auto;
-}
 .form {
   max-width: 860px;
   display: block;
@@ -797,20 +726,6 @@ body {
   letter-spacing: 2px;
   padding: 1rem 2rem;
   margin-top: 59px;
-}
-.footer {
-  height: 212px;
-  background-color: #e7e7e7;
-  text-align: center;
-  padding-top: 57px;
-}
-.footer__subtitle {
-  color: #b2b2b2;
-  font-family: 'ralewayextralight';
-  font-size: 1.6rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 41px;
 }
 .footer__link {
   height: 44px;

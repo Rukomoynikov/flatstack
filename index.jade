@@ -24,9 +24,10 @@ html
 					| and we build awesome websites and mobile apps
 					br
 					a(href='').header__button WORK WITH US!
-		section.service#service
-			h2.service__title SERVICES WE PROVIDE
-			.service__subtitle We are working with both individuals and businesses from all over the globe to create awesome websites and applications.
+		// Big reinforcment
+		section.section.section--service.service#service
+			h2.section__title.section__title--service SERVICES WE PROVIDE
+			.section__subtitle.section__subtitle--service We are working with both individuals and businesses from all over the globe to create awesome websites and applications.
 			.oneService
 				include ./assets/images/icon1.svg
 				h3.oneService__title Branding
@@ -43,9 +44,9 @@ html
 				include ./assets/images/icon4.svg
 				h3.oneService__title ROCKET SCIENCE
 				p.oneService__description Et harum quidem rerum est et expedita distinctio. Nam libero tempore.
-		section.team
-			h2.team__title MEET OUR TEAM
-			.team__subtitle We are a small team of designers and developers, who help brands with big ideas.
+		section.section.section--team.team
+			h2.section__title.section__title--team MEET OUR TEAM
+			.section__subtitle.section__subtitle--team We are a small team of designers and developers, who help brands with big ideas.
 			.team__member.member
 				img.member__photo(src='./assets/images/photo1.jpg')
 				h3.member__name James Collins
@@ -94,9 +95,9 @@ html
 					include ./assets/images/twitter-icon.svg
 				a.member__link(href='#')
 					include ./assets/images/mail-icon.svg
-		section.skills
-			h2.skills__title WE GOT SKILLS!
-			.skills__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		section.section.section--skills.skills
+			h2.section__title.section__title--skills WE GOT SKILLS!
+			.section__subtitle.section__subtitle--skills Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			.skills_one.oneSkill
 				include ./assets/images/radial.svg 
 				.oneSkill__num 90
@@ -113,15 +114,15 @@ html
 				include ./assets/images/radial.svg 
 				.oneSkill__num 85
 				.oneSkill__title UI / UX
-		section.portfolio#portfolio
-			h2.portfolio__title OUR PORTFOLIO
-			.portfolio__subtitle Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
+		section.section.section--portfolio.portfolio#portfolio
+			h2.section__title.section__title--portfolio OUR PORTFOLIO
+			.section__subtitle.section__subtitle--portfolio Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam
 			.portfolioFilter
 				a(href='#', data-tag='all').portfolioFilter__button.portfolioFilter__button--active ALL
 				a(href='#', data-tag='web').portfolioFilter__button WEB
-				a(href='#', data-tag='apps').portfolioFilter__button.portfolioFilter__button--choosed APPS
-				a(href='#', data-tag='icons').portfolioFilter__button.portfolioFilter__button--choosed ICONS
-			.portfolioElement
+				a(href='#', data-tag='apps').portfolioFilter__button APPS
+				a(href='#', data-tag='icons').portfolioFilter__button ICONS
+			.portfolioElement(data-tags="apps")
 				img.portfolioElement__photo(src='./assets/images/work1.jpg')
 				.portfolioElement__overlay 
 					div Isometric 
@@ -129,23 +130,23 @@ html
 						| Perspective 
 						br 
 						| Mock-Up
-			.portfolioElement
+			.portfolioElement(data-tags="apps,icons")
 				img.portfolioElement__photo(src='./assets/images/work2.jpg')
 				.portfolioElement__overlay 
 					div Time Zone App UI
-			.portfolioElement
+			.portfolioElement(data-tags='apps,web')
 				img.portfolioElement__photo(src='./assets/images/work3.jpg')
 				.portfolioElement__overlay 
 					div Viro Media Players UI
-			.portfolioElement
+			.portfolioElement(data-tags='icons,web')
 				img.portfolioElement__photo(src='./assets/images/work4.jpg')
 				.portfolioElement__overlay 
 					div Isometric Perspective Mock-Up
-			.portfolioElement
+			.portfolioElement(data-tags='web')
 				img.portfolioElement__photo(src='./assets/images/work5.jpg')
 				.portfolioElement__overlay 
 					div Time Zone App UI
-			.portfolioElement
+			.portfolioElement(data-tags='apps,web')
 				img.portfolioElement__photo(src='./assets/images/work6.jpg')
 				.portfolioElement__overlay 
 					div Isometric 
@@ -153,9 +154,9 @@ html
 						| Perspective 
 						br 
 						| Mock-Up
-		section.reviews
-			h2.reviews__title WHAT POEPLE SAY ABOUT US
-			.reviews__subtitle Our clients love us!
+		section.section.section--reviews.reviews
+			h2.section__title.section__title--reviews WHAT POEPLE SAY ABOUT US
+			.section__subtitle.section__subtitle--reviews Our clients love us!
 			.reviews__container
 				.reviews__one.review
 					img(src='./assets/images/small-photo1.jpg', align='left').review__photo
@@ -177,9 +178,9 @@ html
 					.review__text Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.
 						.review__name Joe Ward
 						.review__position Co-Founder of Shazam
-		section.contactForm#contact
-			h2.contactForm__title GET IN TOUCH
-			.contactForm__subtitle 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
+		section.section.section--contactForm.contactForm#contact
+			h2.section__title.section__title--contactForm GET IN TOUCH
+			.section__subtitle.section__subtitle--contactForm 1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
 			form.form
 				.form__group
 					input.form__input(type='text', placeholder='Your Name', name='name')
@@ -191,8 +192,8 @@ html
 					textarea.form__input.form__input--textarea(placeholder='Your Message', name='message', required)
 					span.form__error Ну, теперь рассказывайте!
 				input.form__submit(type='submit', value='SUBMIT')
-		footer.footer
-			.footer__subtitle follow us
+		footer.section.section--footer.footer
+			.section__subtitle.section__subtitle--footer follow us
 			a.footer__link(href='#')
 				include ./assets/images/github-icon.svg
 			a.footer__link(href='#')

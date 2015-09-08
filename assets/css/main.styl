@@ -14,6 +14,7 @@ html, body
 	height 100%
 
 // Блок шапка с цветной подложкой, слоганом и кнопкой.
+// Big reinforcment
 .header
 	height 100%
 	background url('../images/headerbg.jpg')
@@ -161,16 +162,48 @@ html, body
 					&:hover
 						box-shadow: 0 0 1px #fff;
 
-// Section with services
-.service
-	background-color: #5db5a4;
-	min-height 747px
+// Sections
+.section
 	padding-top 100px
 	text-align center
 	overflow hidden
-	@media screen and (max-width: 767px)
-		padding 100px 10px 0px 10px
-
+	
+	// Модификаторы под каждый раздел
+		
+	&--service
+		background-color: #5db5a4;
+		min-height 747px
+		@media screen and (max-width: 767px)
+			padding 100px 10px 0px 10px
+			
+	&--team
+		min-height 914px;
+		background #eefafb;
+		padding 100px 0px 50px 10px	
+		
+	&--skills
+		padding-bottom 100px
+		background-color: white;
+		text-align center
+		
+	&--portfolio
+		background black
+		font-size 0px
+		
+	&--reviews
+		background-color: #ed5276;
+		
+	&--contactForm
+		min-height 819px;
+		@media screen and (min-width: 768px) and (max-width: 1024px)
+			padding 109px 10px 0px 10px
+			
+	&--footer
+		min-height: 212px
+		background-color: #e7e7e7;
+		padding-top 57px
+		
+	// Элементы
 	&__title
 		font-family: additional-font
 		font-size: 3.8rem
@@ -178,8 +211,22 @@ html, body
 		margin 0px
 		text-align center
 		letter-spacing 10px
-		color white
 		
+		&--service
+			color white
+			
+		&--team
+			color: #383838;
+		
+		&--reviews
+			color: white
+			
+		&--portfolio
+			color white
+			
+		&--contactForm
+			color: #383838;
+			
 		&:after
 			content " "
 			width 6%
@@ -192,10 +239,30 @@ html, body
 		font-family: light-font
 		font-size: 1.8rem
 		font-weight: 400;
-		color white
 		max-width 709px
 		text-align center
 		margin 33px auto 71px auto
+		
+		&--service
+			color white
+			
+		&--team
+			color: #383838
+			
+		&--reviews
+			color white
+			
+		&--portfolio
+			color white
+			
+		&--contactForm
+			color: #383838;
+			
+		&--footer
+			color: #b2b2b2;
+			font-size: 1.6rem
+			text-transform: uppercase;
+			margin-bottom 41px
 		
 .oneService
 	display inline-block
@@ -224,9 +291,6 @@ html, body
 		
 	svg
 		height 126px
-		
-		// &:hover > path
-		// 	stroke #383838
 
 	&__title
 		font-family: additional-font
@@ -245,41 +309,6 @@ html, body
 		font-weight: 400;
 		line-height: 25px;
 		font-family light-font
-
-// Section with Team members
-
-.team
-	min-height 914px;
-	background #eefafb;
-	padding 100px 0px 50px 10px
-	text-align center
-	margin-bottom 100px
-	
-	&__title
-		font-family: additional-font
-		font-size: 3.8rem
-		font-weight: 300;
-		margin 0px
-		text-align center
-		letter-spacing 10px
-		color: #383838;
-		
-		&:after
-			content " "
-			width 6%
-			height 4px
-			background alpha(#000, 0.3)
-			display block
-			margin 14px auto 0px auto
-		
-	&__subtitle
-		font-family: light-font
-		font-size: 18px;
-		font-weight: 400;
-		color: #383838
-		max-width 709px
-		text-align center
-		margin 33px auto 71px auto
 
 .member
 	display inline-block
@@ -344,9 +373,6 @@ html, body
 		svg
 			height 12px
 .skills
-	min-height: 645px;
-	background-color: white;
-	text-align center
 	
 	&__title
 		font-family: additional-font
@@ -429,43 +455,11 @@ html, body
 		circle
 			transition: stroke-dashoffset 1s linear;
 	
-.reviews
-	min-height: 894px;
-	background-color: #ed5276;
-	padding-top 108px
-	text-align center
-	
-	&__title
-		font-family: additional-font
-		font-size: 3.8rem
-		font-weight: 300;
-		margin 0px
-		text-align center
-		letter-spacing 10px
-		color: white
-		
-		&:after
-			content " "
-			width 6%
-			height 4px
-			background alpha(#000, 0.3)
-			display block
-			margin 14px auto 0px auto
-		
-	&__subtitle
-		font-family: light-font
-		font-size: 1.8rem
-		font-weight: 400;
-		color: white
-		max-width 709px
-		text-align center
-		margin 33px auto 71px auto
-		
-	&__container
-		max-width 1086px
-		margin 0px auto
-		@media screen and (max-width: 767px)
-			padding 0px 10px
+.reviews__container
+	max-width 1086px
+	margin 0px auto
+	@media screen and (max-width: 767px)
+		padding 0px 10px
 		
 .review
 	display inline-block
@@ -520,38 +514,6 @@ html, body
 		font-weight: 400;
 		text-transform: uppercase;
 		margin-top 13px
-
-.portfolio
-	background black
-	padding-top 109px
-	text-align center
-	font-size 0px
-	
-	&__title
-		font-family: additional-font
-		font-size: 3.8rem
-		font-weight: 300;
-		margin 0px
-		text-align center
-		letter-spacing 10px
-		color: white
-		
-		&:after
-			content " "
-			width 6%
-			height 4px
-			background alpha(#fff, 0.3)
-			display block
-			margin 14px auto 0px auto
-		
-	&__subtitle
-		font-family: light-font
-		font-size: 1.8rem
-		font-weight: 400;
-		color: white
-		max-width 709px
-		text-align center
-		margin 33px auto 71px auto
 		
 .portfolioFilter
 	margin 43px	0px 43px 0px
@@ -619,39 +581,6 @@ html, body
 			position absolute
 			top 50%
 			transform translateY(-50%)
-
-.contactForm
-	min-height 819px;
-	padding-top 109px
-	text-align center
-	@media screen and (min-width: 768px) and (max-width: 1024px)
-		padding 109px 10px 0px 10px
-
-	&__title
-		font-family: additional-font
-		font-size: 3.8rem
-		font-weight: 300;
-		margin 0px
-		text-align center
-		letter-spacing 10px
-		color: #383838;
-		
-		&:after
-			content " "
-			width 6%
-			height 4px
-			background alpha(#000, 0.3)
-			display block
-			margin 14px auto 0px auto
-		
-	&__subtitle
-		font-family: light-font
-		font-size: 1.8rem
-		font-weight: 400;
-		color: #383838
-		// max-width 709px
-		text-align center
-		margin 33px auto 71px auto
 		
 .form
 	max-width 860px
@@ -728,18 +657,6 @@ html, body
 		margin-top 59px
 					
 .footer
-	height: 212px;
-	background-color: #e7e7e7;
-	text-align center
-	padding-top 57px
-	
-	&__subtitle
-		color: #b2b2b2;
-		font-family: light-font
-		font-size: 1.6rem
-		font-weight: 400;
-		text-transform: uppercase;
-		margin-bottom 41px
 	
 	&__link
 		height 44px
