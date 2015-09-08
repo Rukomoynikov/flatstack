@@ -208,8 +208,16 @@ html, body
 		display block
 		margin 0px auto
 		margin-bottom 39px
+	@media screen and (min-width: 767px) and (max-width: 1024px)
+		margin-right 0px
+		max-width 50%
+		width calc(50%)
 
-		
+	&:nth-of-type(2n)
+		@media screen and (min-width: 767px) and (max-width: 1024px)
+			margin-right 0px
+			width 50%
+			
 	&:last-child
 		margin-right 0px
 		margin-bottom 0px
@@ -284,7 +292,12 @@ html, body
 		width 100%
 		max-width 100%
 		margin-bottom 40px
-	
+	@media screen and (min-width: 768px) and (max-width: 1024px)
+		width 50%
+		max-width initial
+		margin 0px 0px 40px 0px
+		padding 0px 10px
+		
 	&:last-child
 		margin-right 0px
 	
@@ -369,6 +382,11 @@ html, body
 		width 100%
 		display block
 		margin-bottom 40px
+	@media screen and (min-width: 768px) and (max-width: 1024px)
+		width 50%
+		max-width 50%
+		margin 0px 0px 40px 0px
+		padding 0px 10px
 	
 	&:last-child
 		margin-right 0px
@@ -459,12 +477,19 @@ html, body
 		width 100%
 		margin-bottom 40px
 		margin-right 0px
+	@media screen and (min-width: 768px) and (max-width: 1024px)
+		width 50%
+		max-width 50%
+		margin 0px 0px 40px 0px
+		padding 0px 10px
 
 	&:nth-of-type(2n)
 		margin-left 60px
 		margin-right 0px
 		@media screen and (max-width: 767px)
 			margin-left 0px
+		@media screen and (min-width: 768px) and (max-width: 1024px)
+			margin 0px
 	
 	&__photo
 		border-radius 50%
@@ -579,8 +604,13 @@ html, body
 		font-weight: 300;
 		text-align center
 		display none
+		line-height: 5.8rem
 		@media screen and (max-width: 767px)
 			font-size 1.4rem
+			line-height: 3rem
+		@media screen and (min-width: 768px) and (max-width: 1024px)
+			font-size 1.4rem
+			line-height: 3rem
 
 		div
 			width 100%
@@ -589,12 +619,13 @@ html, body
 			position absolute
 			top 50%
 			transform translateY(-50%)
-			line-height: 58px;
 
 .contactForm
 	min-height 819px;
 	padding-top 109px
 	text-align center
+	@media screen and (min-width: 768px) and (max-width: 1024px)
+		padding 109px 10px 0px 10px
 
 	&__title
 		font-family: additional-font

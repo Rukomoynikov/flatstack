@@ -224,6 +224,19 @@ body {
     margin-bottom: 39px;
   }
 }
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .oneService {
+    margin-right: 0px;
+    max-width: 50%;
+    width: calc(50%);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .oneService:nth-of-type(2n) {
+    margin-right: 0px;
+    width: 50%;
+  }
+}
 .oneService:last-child {
   margin-right: 0px;
   margin-bottom: 0px;
@@ -298,6 +311,14 @@ body {
     width: 100%;
     max-width: 100%;
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .member {
+    width: 50%;
+    max-width: initial;
+    margin: 0px 0px 40px 0px;
+    padding: 0px 10px;
   }
 }
 .member:last-child {
@@ -389,6 +410,14 @@ body {
     width: 100%;
     display: block;
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .oneSkill {
+    width: 50%;
+    max-width: 50%;
+    margin: 0px 0px 40px 0px;
+    padding: 0px 10px;
   }
 }
 .oneSkill:last-child {
@@ -491,6 +520,14 @@ body {
     margin-right: 0px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .review {
+    width: 50%;
+    max-width: 50%;
+    margin: 0px 0px 40px 0px;
+    padding: 0px 10px;
+  }
+}
 .review:nth-of-type(2n) {
   margin-left: 60px;
   margin-right: 0px;
@@ -498,6 +535,11 @@ body {
 @media screen and (max-width: 767px) {
   .review:nth-of-type(2n) {
     margin-left: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .review:nth-of-type(2n) {
+    margin: 0px;
   }
 }
 .review__photo {
@@ -620,10 +662,18 @@ body {
   font-weight: 300;
   text-align: center;
   display: none;
+  line-height: 5.8rem;
 }
 @media screen and (max-width: 767px) {
   .portfolioElement__overlay {
     font-size: 1.4rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .portfolioElement__overlay {
+    font-size: 1.4rem;
+    line-height: 3rem;
   }
 }
 .portfolioElement__overlay div {
@@ -634,12 +684,16 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  line-height: 58px;
 }
 .contactForm {
   min-height: 819px;
   padding-top: 109px;
   text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contactForm {
+    padding: 109px 10px 0px 10px;
+  }
 }
 .contactForm__title {
   font-family: 'Oxygen';
