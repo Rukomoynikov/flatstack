@@ -22,6 +22,14 @@ var diagrams = document.querySelectorAll('.oneSkill');
 Object.prototype.forEach = Array.prototype.forEach;
 Object.prototype.filter = Array.prototype.filter;
 Object.prototype.indexOf = Array.prototype.indexOf;
+Object.prototype.diff = Array.prototype.diff =  function(a) {
+	// this - оригинальный массив, сам объект
+	// a - передаваемый массив
+	// другими словами, проходим фильтром по оригинальному массиву и если текущий элемент оригинального массива есть в передаваемом массиве, 
+	// то его из оригинального массива удалить, в конце в оригинальном массиве останутся элементы которые отсутствуют в передаваемом массиве.
+	// И соответственно если результат пустой массив - то полное вхождение, если ка
+    return this.filter(function(i) {return !(a.indexOf(i) > -1);});
+};
 
 diagrams.forEach(function(el){
 	var svg = el.childNodes[0];
@@ -89,11 +97,12 @@ filterButtons.forEach(function(el){
 	el.addEventListener('click', filterPortfolio)
 })
 
-var portfolioElements = document.querySelectorAll('.portfolioElement');
-var filteredPortfolioElements = [];
-var choosedTags = [];
+var portfolioElements = document.querySelectorAll('.portfolioElement'); // Все элементы портфолио
+var filteredPortfolioElements = []; // Элементы которые необходимо показать
+var choosedTags = []; // Массив в котором собираются выбранные метки
 
 function filterPortfolio(event){
+	// В результате показать элементы где в тегах есть хотя бы один из отмеченных
 	event.preventDefault();
 
 	// Метка на нажатой кнопке
@@ -101,9 +110,11 @@ function filterPortfolio(event){
 
 	// Если такая метка уже выбрана :
 	if (choosedTags.indexOf(requiredTag) >= 0){
+		// Удалить эту метку из массива необходимых меток.
 		choosedTags.pop(choosedTags.indexOf(requiredTag));
 		event.target.classList.remove("portfolioFilter__button--choosed");
-		filterPortfolioItems(choosedTags);
+		// Запустить функцию по отбору необходимых элементов
+		filterPortfolioItems();
 	} else {
 	// Если метка не выбрана :
 		choosedTags.push(requiredTag);
@@ -111,40 +122,34 @@ function filterPortfolio(event){
 		filterPortfolioItems(choosedTags);
 	};
 
-	function filterPortfolioItems (choosed_tags){
-		// Массив содержит в себе элементы которые надо скрыть
+	function filterPortfolioItems (){
+		// На входе есть:
+		// portfolioElements = все элементы
+		// choosed_tags - массив выбранных меток
+		// необходимо вернуть filteredPortfolioElements - который является массивом DOM элементов которые необходимо показать
 		filteredPortfolioElements = portfolioElements.filter(function(element){
-			var element_tags = element.dataset.tags.split(',');		
-			element_tags.forEach(function(tag){
-				if (choosed_tags.indexOf(tag) >= 0) {
-					console.log("true");
-					return true
-				} else {
-					console.log("false");
-					return false
-				}
-			})
+			// element - элемент DOM
+			var element_tags = element.dataset.tags.split(',');	// массив меток которые записаны в data-tags
+			var answers = []; // массив который содержит результат сравнения каждой выбранной метки с каждым тегом в элементе, если хотя бы один 
+							  // элемент массива == true, значит совпадения есть.
+			choosedTags.forEach(function(tag){
+				answers.push(element_tags.indexOf(tag) >= 0);
+			});
+			if (answers.indexOf(true) > -1) {
+				return true
+			} else {
+				return false	
+			}
+		});
+
+		// // Грязный хак,обязательно переделать:
+		portfolioElements.forEach(function(element){
+			element.style.display = 'none';
+		})	
+
+		filteredPortfolioElements.forEach(function(element){
+			element.style.display = 'inline-block';
 		})
 	}
 
-	// event.target.classList.add("portfolioFilter__button--choosed");
-	// requiredTag = event.target.dataset.tag;
-	// filteredPortfolioElements = portfolioElements.filter(function(element){
-	// 	var element_tags = element.dataset.tags.split(',');
-	// 	if (element_tags.indexOf(requiredTag) >= 0) {
-	// 		return false
-	// 	} else {
-	// 		return true
-			
-	// 	}
-	// });
-
-	// // Грязный хак,обязательно переделать:
-	// portfolioElements.forEach(function(element){
-	// 	element.style.display = 'inline-block';
-	// })	
-
-	// filteredPortfolioElements.forEach(function(element){
-	// 	element.style.display = 'none';
-	// })
 }
