@@ -14,7 +14,6 @@ html, body
 	height 100%
 
 // Блок шапка с цветной подложкой, слоганом и кнопкой.
-// Big reinforcment
 .header
 	height 100%
 	background url('../images/headerbg.jpg')
@@ -22,6 +21,7 @@ html, body
 	z-index 100
 	background-size cover
 	
+	// Можно определить цвет в шапке
 	&__redcontainer
 		width 100%
 		height 100%
@@ -64,7 +64,8 @@ html, body
 			transition 0.33s all
 			background-color: white;	
 			color: #f57a82
-			
+
+	// Блок навигации в шапке			
 	.nav
 		position absolute
 		top 59px
@@ -79,6 +80,7 @@ html, body
 			right 0px
 			box-shadow 0 0 2px black
 			
+		// Кнопка вызова меню
 		&__openMenu
 			display none
 			
@@ -94,6 +96,7 @@ html, body
 				font-weight 300
 				letter-spacing 2px 
 		
+		// Само меню
 		.menu
 			@media screen and (max-width: 767px)
 				background-color: white;
@@ -197,7 +200,12 @@ html, body
 		min-height 819px;
 		@media screen and (min-width: 768px) and (max-width: 1024px)
 			padding 109px 10px 0px 10px
-			
+	
+	&--blog
+		background-color: #e7e7e7;
+		text-align left
+		padding-bottom 40px
+
 	&--footer
 		min-height: 212px
 		background-color: #e7e7e7;
@@ -216,6 +224,9 @@ html, body
 			color white
 			
 		&--team
+			color: #383838;
+			
+		&--skills
 			color: #383838;
 		
 		&--reviews
@@ -247,6 +258,9 @@ html, body
 			color white
 			
 		&--team
+			color: #383838
+			
+		&--skills
 			color: #383838
 			
 		&--reviews
@@ -372,33 +386,6 @@ html, body
 			
 		svg
 			height 12px
-.skills
-	
-	&__title
-		font-family: additional-font
-		font-size: 3.8rem
-		font-weight: 300;
-		margin 0px
-		text-align center
-		letter-spacing 10px
-		color: #383838;
-		
-		&:after
-			content " "
-			width 6%
-			height 4px
-			background alpha(#000, 0.3)
-			display block
-			margin 14px auto 0px auto
-		
-	&__subtitle
-		font-family: light-font
-		font-size: 1.8rem
-		font-weight: 400;
-		color: #383838
-		max-width 709px
-		text-align center
-		margin 33px auto 71px auto
 
 .oneSkill
 	margin-right 120px
@@ -547,7 +534,12 @@ html, body
 	
 	&:hover .portfolioElement__overlay
 		display block
-		animation showFromtTop 1s
+		text-shadow 1px 1px 3px black
+		// animation showFromtTop 1s
+			
+	&:hover img
+		transform scale(1.2)
+		transition transform 0.5s
 	
 	&__photo
 		width 100%
@@ -556,7 +548,7 @@ html, body
 		position absolute
 		left 0px
 		top 0px
-		background #612b1a
+		// background #612b1a
 		width 100%
 		height 100%
 		color: white;
@@ -581,6 +573,44 @@ html, body
 			position absolute
 			top 50%
 			transform translateY(-50%)
+	
+.blog__container
+	max-width 1086px
+	margin 0px auto
+
+.blogPost
+	vertical-align top
+	display inline-block
+	max-width 500px
+	width calc(50% - 43px)
+	margin-right 43px
+	
+	&__title
+		color: #383838;
+		font-family: 'Oxygen';
+		font-size: 2.2rem;
+		font-weight: 400;
+		text-transform uppercase
+	
+	&__text
+		color: #383838;
+		font-family: 'ralewayextralight';
+		font-size: 1.6rem;
+		font-weight: 400;
+		min-height: 114px;
+		margin-top: 25px;
+		line-height: 25px;
+		
+	&__date, &__author
+		color: #383838;
+		font-family: 'ralewayextralight';
+		font-size: 1.7rem;
+
+	&__author
+		color: #383838;
+		font-family: 'ralewayextralight';
+		font-size: 1.6rem;
+		float right
 		
 .form
 	max-width 860px

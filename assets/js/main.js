@@ -1,3 +1,5 @@
+'use strict';
+
 // Fixing navigation menu
 var navigationPanel = document.querySelector("nav");
 
@@ -88,22 +90,61 @@ filterButtons.forEach(function(el){
 })
 
 var portfolioElements = document.querySelectorAll('.portfolioElement');
+var filteredPortfolioElements = [];
+var choosedTags = [];
 
 function filterPortfolio(event){
 	event.preventDefault();
-	event.target.classList.add("portfolioFilter__button--choosed");
-	var requiredTag = event.target.dataset.tag;
-	var filteredPortfolioElements = portfolioElements.filter(function(element){
-		var element_tags = element.dataset.tags.split(',');
-		if (element_tags.indexOf(requiredTag) >= 0) {
-			return false
-		} else {
-			return true
-			
-		}
-	});
 
-	filteredPortfolioElements.forEach(function(element){
-		element.style.display = 'none';
-	})
+	// Метка на нажатой кнопке
+	var requiredTag = event.target.dataset.tag;
+
+	// Если такая метка уже выбрана :
+	if (choosedTags.indexOf(requiredTag) >= 0){
+		choosedTags.pop(choosedTags.indexOf(requiredTag));
+		event.target.classList.remove("portfolioFilter__button--choosed");
+		filterPortfolioItems(choosedTags);
+	} else {
+	// Если метка не выбрана :
+		choosedTags.push(requiredTag);
+		event.target.classList.add("portfolioFilter__button--choosed");
+		filterPortfolioItems(choosedTags);
+	};
+
+	function filterPortfolioItems (choosed_tags){
+		// Массив содержит в себе элементы которые надо скрыть
+		filteredPortfolioElements = portfolioElements.filter(function(element){
+			var element_tags = element.dataset.tags.split(',');		
+			element_tags.forEach(function(tag){
+				if (choosed_tags.indexOf(tag) >= 0) {
+					console.log("true");
+					return true
+				} else {
+					console.log("false");
+					return false
+				}
+			})
+		})
+	}
+
+	// event.target.classList.add("portfolioFilter__button--choosed");
+	// requiredTag = event.target.dataset.tag;
+	// filteredPortfolioElements = portfolioElements.filter(function(element){
+	// 	var element_tags = element.dataset.tags.split(',');
+	// 	if (element_tags.indexOf(requiredTag) >= 0) {
+	// 		return false
+	// 	} else {
+	// 		return true
+			
+	// 	}
+	// });
+
+	// // Грязный хак,обязательно переделать:
+	// portfolioElements.forEach(function(element){
+	// 	element.style.display = 'inline-block';
+	// })	
+
+	// filteredPortfolioElements.forEach(function(element){
+	// 	element.style.display = 'none';
+	// })
 }

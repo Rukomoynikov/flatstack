@@ -210,6 +210,11 @@ body {
     padding: 109px 10px 0px 10px;
   }
 }
+.section--blog {
+  background-color: #e7e7e7;
+  text-align: left;
+  padding-bottom: 40px;
+}
 .section--footer {
   min-height: 212px;
   background-color: #e7e7e7;
@@ -227,6 +232,9 @@ body {
   color: #fff;
 }
 .section__title--team {
+  color: #383838;
+}
+.section__title--skills {
   color: #383838;
 }
 .section__title--reviews {
@@ -258,6 +266,9 @@ body {
   color: #fff;
 }
 .section__subtitle--team {
+  color: #383838;
+}
+.section__subtitle--skills {
   color: #383838;
 }
 .section__subtitle--reviews {
@@ -401,32 +412,6 @@ body {
 }
 .member__link svg {
   height: 12px;
-}
-.skills__title {
-  font-family: 'Oxygen';
-  font-size: 3.8rem;
-  font-weight: 300;
-  margin: 0px;
-  text-align: center;
-  letter-spacing: 10px;
-  color: #383838;
-}
-.skills__title:after {
-  content: " ";
-  width: 6%;
-  height: 4px;
-  background: rgba(0,0,0,0.3);
-  display: block;
-  margin: 14px auto 0px auto;
-}
-.skills__subtitle {
-  font-family: 'ralewayextralight';
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #383838;
-  max-width: 709px;
-  text-align: center;
-  margin: 33px auto 71px auto;
 }
 .oneSkill {
   margin-right: 120px;
@@ -606,8 +591,13 @@ body {
 }
 .portfolioElement:hover .portfolioElement__overlay {
   display: block;
-  -webkit-animation: showFromtTop 1s;
-          animation: showFromtTop 1s;
+  text-shadow: 1px 1px 3px #000;
+}
+.portfolioElement:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 .portfolioElement__photo {
   width: 100%;
@@ -616,7 +606,6 @@ body {
   position: absolute;
   left: 0px;
   top: 0px;
-  background: #612b1a;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -648,6 +637,45 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.blog__container {
+  max-width: 1086px;
+  margin: 0px auto;
+}
+.blogPost {
+  vertical-align: top;
+  display: inline-block;
+  max-width: 500px;
+  width: calc(50% - 43px);
+  margin-right: 43px;
+}
+.blogPost__title {
+  color: #383838;
+  font-family: 'Oxygen';
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.blogPost__text {
+  color: #383838;
+  font-family: 'ralewayextralight';
+  font-size: 1.6rem;
+  font-weight: 400;
+  min-height: 114px;
+  margin-top: 25px;
+  line-height: 25px;
+}
+.blogPost__date,
+.blogPost__author {
+  color: #383838;
+  font-family: 'ralewayextralight';
+  font-size: 1.7rem;
+}
+.blogPost__author {
+  color: #383838;
+  font-family: 'ralewayextralight';
+  font-size: 1.6rem;
+  float: right;
 }
 .form {
   max-width: 860px;
