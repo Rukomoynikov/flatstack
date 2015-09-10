@@ -1,0 +1,95 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 16em 171.6em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+.icon.dribble-icon:before {
+    background-position: 0em 0em;
+    width: 4.4em;
+    height: 4.4em;
+}
+
+.icon.facebook-icon:before {
+    background-position: 0em -4.4em;
+    width: 0.8em;
+    height: 1.6em;
+}
+
+.icon.github-icon:before {
+    background-position: 0em -6em;
+    width: 4.5em;
+    height: 4.4em;
+}
+
+.icon.icon1:before {
+    background-position: 0em -10.4em;
+    width: 12.4em;
+    height: 12.1em;
+}
+
+.icon.icon2:before {
+    background-position: 0em -22.5em;
+    width: 7.4em;
+    height: 12.3em;
+}
+
+.icon.icon3:before {
+    background-position: 0em -34.8em;
+    width: 15.9em;
+    height: 12.6em;
+}
+
+.icon.icon4:before {
+    background-position: 0em -47.4em;
+    width: 9.1em;
+    height: 13.8em;
+}
+
+.icon.instagram-icon:before {
+    background-position: 0em -61.2em;
+    width: 4.4em;
+    height: 4.4em;
+}
+
+.icon.linkedin-icon:before {
+    background-position: 0em -65.6em;
+    width: 1.6em;
+    height: 1.6em;
+}
+
+.icon.mail-icon:before {
+    background-position: 0em -67.2em;
+    width: 1.6em;
+    height: 1.2em;
+}
+
+.icon.radial:before {
+    background-position: 0em -68.4em;
+    width: 16em;
+    height: 16em;
+}
+
+.icon.sprite:before {
+    background-position: 0em -84.4em;
+    width: 16em;
+    height: 85.8em;
+}
+
+.icon.twitter-icon:before {
+    background-position: 0em -170.2em;
+    width: 1.7em;
+    height: 1.4em;
+}
+

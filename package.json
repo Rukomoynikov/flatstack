@@ -6,6 +6,7 @@
   	"gulp-jade" : "*",
   	"gulp-stylus" : "*",
   	"gulp-less" : "*",
-  	"gulp-autoprefixer" : "*"
+  	"gulp-autoprefixer" : "*",
+  	"gulp-svg-sprites" : "*"
   }
 }

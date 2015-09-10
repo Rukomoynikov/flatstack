@@ -3,11 +3,12 @@ html
 	head
 		title FlatStack Frontend Test
 		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(href="./assets/css/normalize.css", rel="stylesheet")
-		link(href="./assets/css/main.css", rel="stylesheet")
-		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet")
+		meta(name='viewport', content='width=device-width, initial-scale=1', type='text/css')
+		link(href="./assets/css/normalize.css", rel="stylesheet", type='text/css')
+		link(href="./assets/css/main.css", rel="stylesheet", type='text/css')
+		link(href="./assets/fonts/raleway/raleway.css", rel="stylesheet", type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css')
+		link(href="./assets/images/svg/sprite/css/sprite.css", rel="stylesheet", type='text/css')
 	body
 		header.header
 			.header__redcontainer
@@ -24,24 +25,23 @@ html
 					| and we build awesome websites and mobile apps
 					br
 					a(href='').header__button WORK WITH US!
-		// Big reinforcment
 		section.section.section--service.service#service
 			h2.section__title.section__title--service SERVICES WE PROVIDE
 			.section__subtitle.section__subtitle--service We are working with both individuals and businesses from all over the globe to create awesome websites and applications.
 			.oneService
-				include ./assets/images/icon1.svg
+				span.icon.icon1
 				h3.oneService__title Branding
 				p.oneService__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
 			.oneService
-				include ./assets/images/icon2.svg
+				span.icon.icon2
 				h3.oneService__title Design
 				p.oneService__description Sed ut perspiciatis unde omnis iste natus error sit voluptatem  
 			.oneService
-				include ./assets/images/icon3.svg
+				span.icon.icon3
 				h3.oneService__title Development
 				p.oneService__description At vero eos et accusamus et iusto odio dignissimos qui blanditiis praesentium.
 			.oneService
-				include ./assets/images/icon4.svg
+				span.icon.icon4
 				h3.oneService__title ROCKET SCIENCE
 				p.oneService__description Et harum quidem rerum est et expedita distinctio. Nam libero tempore.
 		section.section.section--team.team
@@ -53,65 +53,65 @@ html
 				span.member__position CEO / Marketing Guru
 				p.member__description Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
 				a.member__link(href='#')
-					include ./assets/images/facebook-icon.svg
+					span.icon.facebook-icon
 				a.member__link(href='#')
-					include ./assets/images/twitter-icon.svg
+					span.icon.twitter-icon
 				a.member__link(href='#')
-					include ./assets/images/linkedin-icon.svg
+					span.icon.linkedin-icon
 				a.member__link(href='#')
-					include ./assets/images/mail-icon.svg
+					span.icon.mail-icon
 			.team__member.member
 				img.member__photo(src='./assets/images/photo2.jpg')
 				h3.member__name Peter Davis
 				span.member__position Creative Director
 				p.member__description Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.
 				a.member__link(href='#')
-					include ./assets/images/twitter-icon.svg
+					span.icon.twitter-icon
 				a.member__link(href='#')
-					include ./assets/images/linkedin-icon.svg
+					span.icon.linkedin-icon
 				a.member__link(href='#')
-					include ./assets/images/mail-icon.svg
+					span.icon.mail-icon
 			.team__member.member
 				img.member__photo(src='./assets/images/photo3.jpg')
 				h3.member__name Olivia Wilde
 				span.member__position Lead Designer
 				p.member__description Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
 				a.member__link(href='#')
-					include ./assets/images/facebook-icon.svg
+					span.icon.facebook-icon
 				a.member__link(href='#')
-					include ./assets/images/twitter-icon.svg
+					span.icon.twitter-icon
 				a.member__link(href='#')
-					include ./assets/images/linkedin-icon.svg
+					span.icon.linkedin-icon
 				a.member__link(href='#')
-					include ./assets/images/mail-icon.svg
+					span.icon.mail-icon
 			.team__member.member
 				img.member__photo(src='./assets/images/photo4.jpg')
 				h3.member__name Ashley Greene
 				span.member__position SEO / Developer
 				p.member__description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
 				a.member__link(href='#')
-					include ./assets/images/facebook-icon.svg
+					span.icon.facebook-icon
 				a.member__link(href='#')
-					include ./assets/images/twitter-icon.svg
+					span.icon.twitter-icon
 				a.member__link(href='#')
-					include ./assets/images/mail-icon.svg
+					span.icon.mail-icon
 		section.section.section--skills.skills
 			h2.section__title.section__title--skills WE GOT SKILLS!
 			.section__subtitle.section__subtitle--skills Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			.skills_one.oneSkill
-				include ./assets/images/radial.svg 
+				include ./assets/images/svg/radial.svg 
 				.oneSkill__num 90
 				.oneSkill__title web Design
 			.skills_one.oneSkill.oneSkill--pink
-				include ./assets/images/radial.svg 
+				include ./assets/images/svg/radial.svg 
 				.oneSkill__num 75
 				.oneSkill__title HTML / CSS
 			.skills_one.oneSkill.oneSkill--lightGreen
-				include ./assets/images/radial.svg 
+				include ./assets/images/svg/radial.svg 
 				.oneSkill__num 70
 				.oneSkill__title GRAPHIC DESIGN
 			.skills_one.oneSkill.oneSkill--rose
-				include ./assets/images/radial.svg 
+				include ./assets/images/svg/radial.svg 
 				.oneSkill__num 85
 				.oneSkill__title UI / UX
 		section.section.section--portfolio.portfolio#portfolio
@@ -214,13 +214,13 @@ html
 		footer.section.section--footer.footer
 			.section__subtitle.section__subtitle--footer follow us
 			a.footer__link(href='#')
-				include ./assets/images/github-icon.svg
+				span.icon.github-icon
 			a.footer__link(href='#')
-				include ./assets/images/twitter-icon.svg
+				span.icon.twitter-icon
 			a.footer__link(href='#')
-				include ./assets/images/dribble-icon.svg
+				span.icon.dribble-icon
 			a.footer__link(href='#')
-				include ./assets/images/facebook-icon.svg
+				span.icon.facebook-icon
 			a.footer__link(href='#')
-				include ./assets/images/instagram-icon.svg
+				span.icon.instagram-icon
 		script(src='./assets/js/main.js', type='text/javascript')

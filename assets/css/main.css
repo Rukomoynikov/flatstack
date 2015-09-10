@@ -218,7 +218,7 @@ body {
 .section--footer {
   min-height: 212px;
   background-color: #e7e7e7;
-  padding-top: 57px;
+  padding-top: 10px;
 }
 .section__title {
   font-family: 'Oxygen';
@@ -760,13 +760,16 @@ body {
   font-size: 0px;
   padding: 0px 15px;
 }
-.footer__link svg {
-  height: 44px;
+.footer__link .icon {
+  display: inline-block;
+  vertical-align: top;
 }
-.footer__link svg:hover > path {
-  fill: #000;
+.footer__link .twitter-icon {
+  font-size: 30px;
 }
-/* Animation for top menu */
+.footer__link .facebook-icon {
+  font-size: 25px;
+}
 @-webkit-keyframes showFromtTop {
   from {
     top: -70px;

@@ -209,7 +209,7 @@ html, body
 	&--footer
 		min-height: 212px
 		background-color: #e7e7e7;
-		padding-top 57px
+		padding-top 10px
 		
 	// Элементы
 	&__title
@@ -693,13 +693,17 @@ html, body
 		font-size 0px
 		padding 0px 15px
 		
-		svg
-			height 44px
+		.icon
+			display inline-block
+			vertical-align top
+		
+		.twitter-icon
+			font-size 30px
 			
-			&:hover > path
-				fill black
+		 .facebook-icon
+			font-size 25px
+			
 
-/* Animation for top menu */
 @keyframes showFromtTop {
 	from {
 		top -70px
