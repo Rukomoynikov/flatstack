@@ -144,7 +144,7 @@ function filterPortfolio(event){
 
 		// // Грязный хак,обязательно переделать:
 		portfolioElements.forEach(function(element){
-			element.style.display = 'none';
+			element.style.display = filteredPortfolioElements.length > 0 ? 'none' : 'inline-block';
 		})	
 
 		filteredPortfolioElements.forEach(function(element){
