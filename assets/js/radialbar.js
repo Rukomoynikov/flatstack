@@ -3,8 +3,8 @@ function RadialBar(options){
 		height: options.height || 200,
 		width: options.width || 200,
 		barWidth: options.barWidth || 20,
-		mainColor: options.color || "blue",
-		backgroundColor: options.color || "#383838",
+		mainColor: options.mainColor || "blue",
+		backgroundColor: options.backgroundColor || "#383838",
 		domObj : options.domObj || 'body',
 		procent : options.procent || 100
 	};
@@ -21,29 +21,28 @@ RadialBar.prototype.readyToDraw = function readyToDraw (){
 	this.container.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
 	this.container.setAttribute('width', this.config.width)
 	this.container.setAttribute('height', this.config.height)
-	this.container.setAttribute('stroke-width', '1em')
 	this.container.setAttribute('viewPort', '0 0 200 200')
 	this.container.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
 	this.container.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+	this.container.style.fill = 'transparent';
 
 	this.background_bar = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
 	this.background_bar.classList.add('background_bar');
 	this.background_bar.setAttribute('cx', this.config.width / 2)
 	this.background_bar.setAttribute('cy', this.config.width / 2)
 	this.background_bar.setAttribute('r', (this.config.width - this.config.barWidth) / 2)
-	this.background_bar.setAttribute('fill', 'transparent')
-	this.background_bar.setAttribute('stroke', this.config.backgroundColor)
-	this.background_bar.setAttribute('stroke-width', this.config.barWidth)
+	this.background_bar.style.fill =  'transparent';
+	this.background_bar.style.stroke = this.config.backgroundColor;
+	this.background_bar.style.strokeWidth = this.config.barWidth;
 
 	this.main_bar = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
 	this.main_bar.classList.add('main_bar');
 	this.main_bar.setAttribute('cx', this.config.width / 2)
 	this.main_bar.setAttribute('cy', this.config.width / 2)
 	this.main_bar.setAttribute('r', (this.config.width - this.config.barWidth) / 2)
-	this.main_bar.setAttribute('fill', 'transparent')
-	this.main_bar.setAttribute('stroke', this.config.mainColor)
-	this.main_bar.setAttribute('stroke-width', '20px')
-	this.background_bar.setAttribute('stroke-width', this.config.barWidth)
+	this.main_bar.style.fill =  'transparent';
+	this.main_bar.style.stroke = this.config.mainColor;
+	this.main_bar.style.strokeWidth = this.config.barWidth;
 
 	this.container.appendChild(this.background_bar);
 	this.container.appendChild(this.main_bar);
@@ -65,12 +64,43 @@ RadialBar.prototype.drawBars = function(){
 		this.main_bar.offset = this.main_bar.circleLength;
 	}
 
+	// Анимация для баров
+	this.main_bar.style.transition = 'stroke-dashoffset 1s linear';
+
 	// Присвоить необходимые значения барам
 	this.main_bar.style.strokeDasharray = this.background_bar.style.strokeDasharray = this.main_bar.circleLength
 	this.main_bar.style.strokeDashoffset = this.main_bar.offset
+
+	// Хак, для того чтобы начало бара было там где должно быть, иначе начинается справа на отметке 90%.
+	var required_rotate = 290 + Number(this.main_bar.offset);
+	this.container.style.transform = "rotateZ(" + required_rotate + "deg)";
+	this.container.style['-webkit-transform'] = "rotateZ(" + required_rotate + "deg)";
 }
 
-// var radial1 = new RadialBar({
-// 	domObj : '.blogPost',
-// 	procent : 50
-// });
+var radial90 = new RadialBar({
+	domObj : '.oneSkill__radial--90',
+	mainColor: '#3c989e',
+	backgroundColor : '#c7c7c7',
+	procent : 90
+});
+
+var radial75 = new RadialBar({
+	domObj : '.oneSkill__radial--75',
+	mainColor: '#ed5276',
+	backgroundColor : '#c7c7c7',
+	procent : 75
+});
+
+var radial70 = new RadialBar({
+	domObj : '.oneSkill__radial--70',
+	mainColor: '#5db5a4',
+	backgroundColor : '#c7c7c7',
+	procent : 70
+});
+
+var radial85 = new RadialBar({
+	domObj : '.oneSkill__radial--85',
+	mainColor: '#f57a82',
+	backgroundColor : '#c7c7c7',
+	procent : 85
+});
