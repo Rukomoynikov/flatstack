@@ -59,7 +59,7 @@ RadialBar.prototype.drawBars = function(){
 
 	// Вычислить сколько в пикселях необходим отступ в баре
 	if (this.config.procent !== 100){
-		this.main_bar.offset = "-" + ((100 - this.config.procent) / 100 ) * this.main_bar.circleLength;
+		this.main_bar.offset = ((100 - this.config.procent) / 100 ) * this.main_bar.circleLength;
 	} else {
 		this.main_bar.offset = this.main_bar.circleLength;
 	}
@@ -67,16 +67,18 @@ RadialBar.prototype.drawBars = function(){
 	// Анимация для баров
 	this.main_bar.style.transition = 'stroke-dashoffset 1s linear';
 
+	// this.main_bar.addEventListener('mouseover', addAnimate)
+
 	// Присвоить необходимые значения барам
 	this.main_bar.style.strokeDasharray = this.background_bar.style.strokeDasharray = this.main_bar.circleLength
 	this.main_bar.style.strokeDashoffset = this.main_bar.offset
 
 	// Хак, для того чтобы начало бара было там где должно быть, иначе начинается справа на отметке 90%.
-	var required_rotate = 290 + Number(this.main_bar.offset);
-	this.container.style.transform = "rotateZ(" + required_rotate + "deg)";
-	this.container.style['-webkit-transform'] = "rotateZ(" + required_rotate + "deg)";
+	this.container.style.transform = "rotateZ(270deg)";
+	this.container.style['-webkit-transform'] = "rotateZ(270deg)";
 }
 
+// Создание четырёх баров.
 var radial90 = new RadialBar({
 	domObj : '.oneSkill__radial--90',
 	mainColor: '#3c989e',
